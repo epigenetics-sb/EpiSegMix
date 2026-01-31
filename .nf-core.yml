@@ -1,0 +1,17 @@
+repository_type: pipeline
+
+nf_core_version: 3.5.2
+
+lint: {}
+
+template:
+  org: nf-core
+  name: episegmix
+  description: Chromatin segmentation pipeline using Nextflow and EpiSegMix
+  author: Aaryan Jaitly
+  version: 1.0.0dev
+  force: true
+  outdir: .
+  skip_features:
+    - gpu
+  is_nfcore: true
