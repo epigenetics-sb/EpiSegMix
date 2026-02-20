@@ -4,6 +4,7 @@ This repository contains a Nextflow workflow for chromatin segmentation to annot
 EpiSegMix first estimates the parameters of a hidden Markov model, where each state corresponds to a different combination of epigenetic modifications and thus represents a functional role, such as enhancer, transcription start site, active or silent gene. The spatial relations are captured via the transition probabolities. After the parameter estimation, each region in the genome is annotated with the most likely chromatin state. The implementation allows to choose for each histone modification a different distributional assumption (the available distributions are listed below). Similar tools are ChromHMM or EpiCSeg (references [2] and [3]).
 The implementation of the HMM is in C++. The parameters are estimated using the Baum-Welch algorithm and for decoding the user can select either the Viterbi algorithm or posterior decoding. For all distributions where the MLE contains no closed form solution, the parameters are updated by numerical optimization using the Migrad minimizer from ROOT (https://root.cern/root/htmldoc/guides/minuit2/Minuit2Letter.pdf). The initial parameters of the HMM are found using k-Means clustering. Each cluster is assumed to correspond to one state and the parameters are initialized using method of moment estimates.
 
+- Aaryan Jaitly @aaryanjaitly (core developer)
 
 ## Quick Start
 
