@@ -110,3 +110,15 @@ For a full description and for citing use, please cite the following article on
 > Schmitz, J. E., Aggarwal, N., Laufer, L. et al. 2023. EpiSegMix: a flexible distribution hidden Markov model with duration modeling for chromatin state discovery, <https://doi.org/10.1093/bioinformatics/btae178>
 
 > Aggarwal, N., Schmitz, J. E., Laufer, L., Rahmann, S., Walter, J., & Salhab, A. (2025). Integrated flexible DNA methylation-chromatin segmentation modeling enhances epigenomic state annotation. bioRxiv, 2025-07, <https://doi.org/10.1101/2025.07.25.666820>
+
+
+
+## References
+
+[1] Mölder, F., Jablonski, K.P., Letcher, B. et al. 2021. Sustainable data analysis with Snakemake. F1000Res 10, 33 <https://f1000research.com/articles/10-33>.
+
+[2] Ernst, J., and Kellis, M. (2010). “Discovery and characterization of chromatin states for systematic annotation of the human genome,” Nature Biotechnology 28(8), 817–825, doi: <https://doi.org/10.1038/nbt.1662>.
+
+[3] Mammana, A., and Chung, H.-R. (2015). “Chromatin segmentation based on a probabilistic model for read counts explains a large portion of the epigenome,” Genome Biology 16(1), 151, doi:<https://doi.org/10.1186/s13059-015-0708-z>.
+
+[4] Mammana A, and Helmuth J (2023). bamsignals: Extract read count signals from bam files. R package version 1.32.0, https://github.com/lamortenera/bamsignals. 
