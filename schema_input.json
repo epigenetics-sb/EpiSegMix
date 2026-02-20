@@ -1,0 +1,107 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/aaryanjaitly/nextflow_pipeline_HiWi/schema_input.json",
+  "title": "EpiSegMix Pipeline Input",
+  "description": "Schema for the samplesheet.csv file used in the pipeline",
+  "type": "array",
+  "uniqueItems": true,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["sample_id", "replicate", "epigenetic_mark", "file_name", "modality", "paired_end"],
+    "properties": {
+      "sample_id": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9_\\-\\.]+$",
+        "description": "Unique identifier for the sample. No spaces allowed.",
+        "errorMessage": {
+          "type": "sample_id must be a string",
+          "pattern": "sample_id must only contain alphanumeric characters, underscores, dashes, or dots (no spaces)"
+        }
+      },
+      "replicate": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "Replicate number for the sample",
+        "default": 1,
+        "errorMessage": "replicate must be a positive integer"
+      },
+      "epigenetic_mark": {
+        "type": "string",
+        "description": "The specific histone mark or methylation type (e.g. H3K27ac, WGBS, CustomMark1)",
+        "pattern": "^[a-zA-Z0-9_\\-\\.]+$",
+        "errorMessage": {
+            "type": "epigenetic_mark must be a string",
+            "pattern": "epigenetic_mark must only contain alphanumeric characters, underscores, dashes, or dots (no spaces)"
+        }
+      },
+      "file_name": {
+        "type": "string",
+        "description": "Absolute path to the input data file (BAM or BED)",
+        "format": "file-path",
+        "exists": true,
+        "errorMessage": {
+          "exists": "The file specified in 'file_name' does not exist on the filesystem"
+        }
+      },
+      "modality": {
+        "type": "string",
+        "description": "The sequencing experiment type",
+        "enum": ["ChIP-seq", "WGBS", "ATAC-seq", "NOMe-seq"],
+        "errorMessage": "modality must be one of: ChIP-seq, WGBS, ATAC-seq, NOMe-seq"
+      },
+      "paired_end": {
+        "type": "boolean",
+        "description": "Set to true for paired-end sequencing data",
+        "default": true,
+        "errorMessage": "paired_end must be true or false"
+      }
+    },
+    "allOf": [
+      {
+        "if": { "properties": { "modality": { "const": "ChIP-seq" } } },
+        "then": {
+          "properties": {
+            "file_name": {
+              "pattern": "^\\S+\\.bam$",
+              "errorMessage": "ChIP-seq files must end with .bam"
+            }
+          }
+        }
+      },
+      {
+        "if": { "properties": { "modality": { "const": "ATAC-seq" } } },
+        "then": {
+          "properties": {
+            "file_name": {
+              "pattern": "^\\S+\\.bam$",
+              "errorMessage": "ATAC-seq files must end with .bam"
+            }
+          }
+        }
+      },
+      {
+        "if": { "properties": { "modality": { "const": "WGBS" } } },
+        "then": {
+          "properties": {
+            "file_name": {
+              "pattern": "^\\S+\\.(bed|bed\\.gz)$",
+              "errorMessage": "WGBS files must end with .bed or .bed.gz"
+            }
+          }
+        }
+      },
+      {
+        "if": { "properties": { "modality": { "const": "NOMe-seq" } } },
+        "then": {
+          "properties": {
+            "file_name": {
+              "pattern": "^\\S+\\.(bed|bed\\.gz)$",
+              "errorMessage": "NOMe-seq files must end with .bed or .bed.gz"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
