@@ -1,7 +1,8 @@
 # EpiSegMix Pipeline
 
-This is a Nextflow workflow for epigenomic segmentation. It integrates histone marks (ChIP-seq), chromatin accessibility (ATAC-seq) and DNA methylation (WGBS/NOMe-seq) to generate chromatin state maps using Short Duration or Long Duration based Hidden Markov Models.
-
+This repository contains a Nextflow workflow for chromatin segmentation to annotate both coding and non-coding regions of the genome.
+EpiSegMix first estimates the parameters of a hidden Markov model, where each state corresponds to a different combination of epigenetic modifications and thus represents a functional role, such as enhancer, transcription start site, active or silent gene. The spatial relations are captured via the transition probabolities. After the parameter estimation, each region in the genome is annotated with the most likely chromatin state. The implementation allows to choose for each histone modification a different distributional assumption (the available distributions are listed below). Similar tools are ChromHMM or EpiCSeg (references [2] and [3]).
+The implementation of the HMM is in C++. The parameters are estimated using the Baum-Welch algorithm and for decoding the user can select either the Viterbi algorithm or posterior decoding. For all distributions where the MLE contains no closed form solution, the parameters are updated by numerical optimization using the Migrad minimizer from ROOT (https://root.cern/root/htmldoc/guides/minuit2/Minuit2Letter.pdf). The initial parameters of the HMM are found using k-Means clustering. Each cluster is assumed to correspond to one state and the parameters are initialized using method of moment estimates.
 ---
 
 ## Quick Start
@@ -10,8 +11,8 @@ This is a Nextflow workflow for epigenomic segmentation. It integrates histone m
 2. **Clone & Run Test:**
 
 ```bash
-git clone https://github.com/aaryanjaitly/nextflow_pipeline_HiWi.git
-cd nextflow_pipeline_HiWi
+git clone https://github.com/epigenetics-sb/EpiSegMix.git 
+cd EpiSegMix 
 
 # Run with test data
 nextflow run main.nf -profile test,docker
