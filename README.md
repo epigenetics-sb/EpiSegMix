@@ -107,4 +107,5 @@ Results are saved in your output directory:
 For a full description and for citing use, please cite the following article on
 
 > Schmitz, J. E., Aggarwal, N., Laufer, L. et al. 2023. EpiSegMix: a flexible distribution hidden Markov model with duration modeling for chromatin state discovery, <https://doi.org/10.1093/bioinformatics/btae178>
+
 > Aggarwal, N., Schmitz, J. E., Laufer, L., Rahmann, S., Walter, J., & Salhab, A. (2025). Integrated flexible DNA methylation-chromatin segmentation modeling enhances epigenomic state annotation. bioRxiv, 2025-07, <https://doi.org/10.1101/2025.07.25.666820>
