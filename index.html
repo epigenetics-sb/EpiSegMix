@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EpiSegMix — Chromatin Segmentation Pipeline</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #080e14;
+      --surface: #0d1720;
+      --surface2: #122030;
+      --border: #1e3245;
+      --accent: #3dd9c4;
+      --accent2: #7b61ff;
+      --accent3: #f97316;
+      --text: #c9dde8;
+      --text-dim: #5e7d94;
+      --text-bright: #eaf4fb;
+      --code-bg: #0a1a26;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── BACKGROUND GRID ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(61,217,196,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(61,217,196,.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      padding: 100px 40px 80px;
+      text-align: center;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: -120px; left: 50%;
+      transform: translateX(-50%);
+      width: 700px; height: 700px;
+      background: radial-gradient(circle, rgba(61,217,196,.12) 0%, rgba(123,97,255,.07) 40%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-family: 'DM Mono', monospace;
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(61,217,196,.3);
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+      animation: fadeUp .6s ease both;
+    }
+
+    .hero h1 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 700;
+      color: var(--text-bright);
+      line-height: 1.05;
+      letter-spacing: -.02em;
+      animation: fadeUp .7s .1s ease both;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .hero-sub {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: var(--text-dim);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeUp .7s .2s ease both;
+    }
+
+    .hero-actions {
+      margin-top: 36px;
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: fadeUp .7s .3s ease both;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 26px;
+      border-radius: 8px;
+      font-family: 'DM Mono', monospace;
+      font-size: .85rem;
+      text-decoration: none;
+      transition: all .2s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #060d12;
+      font-weight: 500;
+    }
+    .btn-primary:hover { background: #5ee8d4; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(61,217,196,.3); }
+
+    .btn-ghost {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: transparent;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+    /* ── LAYOUT ── */
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    section { padding: 60px 0; border-top: 1px solid var(--border); }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: .7rem;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      font-family: 'Fraunces', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 600;
+      color: var(--text-bright);
+      margin-bottom: 24px;
+      letter-spacing: -.01em;
+    }
+
+    h3 {
+      font-family: 'Fraunces', serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--text-bright);
+      margin: 32px 0 12px;
+    }
+
+    p { margin-bottom: 16px; color: var(--text); }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── INTRO ── */
+    .intro-text {
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* ── MODULE CARDS ── */
+    .modules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .module-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px;
+      transition: border-color .2s, transform .2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .module-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      opacity: 0;
+      transition: opacity .2s;
+    }
+    .module-card:hover { border-color: rgba(61,217,196,.3); transform: translateY(-3px); }
+    .module-card:hover::before { opacity: 1; }
+
+    .module-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: .72rem;
+      color: var(--accent);
+      background: rgba(61,217,196,.1);
+      padding: 3px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    .module-card h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: .95rem;
+      font-weight: 500;
+      color: var(--text-bright);
+      margin-bottom: 8px;
+    }
+
+    .module-card p {
+      font-size: .85rem;
+      color: var(--text-dim);
+      margin: 0;
+    }
+
+    /* ── PIPELINE STEPS ── */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 24px;
+    }
+
+    .step {
+      display: flex;
+      gap: 20px;
+      position: relative;
+      padding-bottom: 32px;
+    }
+
+    .step:last-child { padding-bottom: 0; }
+
+    .step-line {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .step-num {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'DM Mono', monospace;
+      font-size: .8rem;
+      color: var(--accent);
+      flex-shrink: 0;
+      z-index: 1;
+    }
+
+    .step-connector {
+      width: 1px;
+      flex: 1;
+      background: var(--border);
+      margin-top: 4px;
+    }
+
+    .step:last-child .step-connector { display: none; }
+
+    .step-body { padding-top: 6px; }
+    .step-body h4 {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-bright);
+      margin-bottom: 6px;
+    }
+    .step-body p { font-size: .9rem; color: var(--text-dim); margin: 0; }
+
+    /* ── CODE BLOCKS ── */
+    .code-block {
+      background: var(--code-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+
+    .code-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 18px;
+      background: rgba(255,255,255,.03);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .code-dots { display: flex; gap: 6px; }
+    .code-dots span {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+    }
+    .dot-r { background: #ff5f57; }
+    .dot-y { background: #febc2e; }
+    .dot-g { background: #28c840; }
+
+    .code-title {
+      font-family: 'DM Mono', monospace;
+      font-size: .72rem;
+      color: var(--text-dim);
+      letter-spacing: .05em;
+    }
+
+    pre {
+      padding: 20px 22px;
+      overflow-x: auto;
+      font-family: 'DM Mono', monospace;
+      font-size: .82rem;
+      line-height: 1.8;
+      color: var(--text);
+    }
+
+    .kw { color: #7b61ff; }
+    .flag { color: var(--accent); }
+    .val { color: #f97316; }
+    .comment { color: var(--text-dim); font-style: italic; }
+
+    /* ── SAMPLESHEET TABLE ── */
+    .table-wrap { overflow-x: auto; margin-top: 20px; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .85rem;
+      font-family: 'DM Mono', monospace;
+    }
+
+    thead tr {
+      background: var(--surface2);
+    }
+
+    th {
+      padding: 12px 16px;
+      text-align: left;
+      color: var(--accent);
+      font-weight: 400;
+      font-size: .72rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border);
+    }
+
+    td {
+      padding: 10px 16px;
+      border-bottom: 1px solid rgba(30,50,69,.6);
+      color: var(--text);
+      vertical-align: top;
+    }
+
+    tr:hover td { background: rgba(61,217,196,.03); }
+
+    td:first-child { color: var(--accent2); }
+
+    /* ── PARAMS TABLE ── */
+    .param-section { margin-top: 32px; }
+
+    .param-group-title {
+      font-family: 'DM Mono', monospace;
+      font-size: .72rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--accent3);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 8px;
+    }
+
+    .param-row {
+      display: grid;
+      grid-template-columns: 220px 120px 1fr;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(30,50,69,.5);
+      align-items: start;
+    }
+
+    .param-name {
+      font-family: 'DM Mono', monospace;
+      font-size: .82rem;
+      color: var(--accent);
+    }
+
+    .param-default {
+      font-family: 'DM Mono', monospace;
+      font-size: .78rem;
+      color: var(--accent3);
+      background: rgba(249,115,22,.08);
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      align-self: start;
+    }
+
+    .param-desc { font-size: .85rem; color: var(--text-dim); }
+
+    /* ── OUTPUTS ── */
+    .output-list { list-style: none; margin-top: 20px; display: flex; flex-direction: column; gap: 12px; }
+    .output-list li {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px 20px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .output-icon {
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .output-path {
+      font-family: 'DM Mono', monospace;
+      font-size: .8rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+
+    .output-desc { font-size: .85rem; color: var(--text-dim); }
+
+    /* ── CITATIONS ── */
+    .cite-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-top: 20px; }
+    .cite-list li {
+      background: var(--surface);
+      border-left: 3px solid var(--accent2);
+      border-radius: 0 8px 8px 0;
+      padding: 16px 20px;
+      font-size: .88rem;
+    }
+    .cite-num {
+      font-family: 'DM Mono', monospace;
+      color: var(--accent2);
+      font-size: .75rem;
+      margin-bottom: 6px;
+    }
+    .cite-list a { color: var(--accent); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 40px 32px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer p {
+      font-size: .82rem;
+      color: var(--text-dim);
+      margin: 0;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .param-row { grid-template-columns: 1fr; gap: 6px; }
+      .hero { padding: 70px 24px 60px; }
+      .wrapper { padding: 0 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Nextflow · HMM · Epigenomics</div>
+  <h1>Epi<span>Seg</span>Mix</h1>
+  <p class="hero-sub">A flexible distribution hidden Markov model pipeline for chromatin state discovery and epigenomic segmentation.</p>
+  <div class="hero-actions">
+    <a href="https://github.com/epigenetics-sb/EpiSegMix" class="btn btn-primary">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.115 2.51.337 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10.01 10.01 0 0 0 22 12c0-5.52-4.48-10-10-10z"/></svg>
+      GitHub
+    </a>
+    <a href="https://doi.org/10.1093/bioinformatics/btae178" class="btn btn-ghost">Paper →</a>
+    <a href="https://github.com/epigenetics-sb/EpiSegMix/issues" class="btn btn-ghost">Issues</a>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="wrapper">
+
+  <!-- INTRODUCTION -->
+  <section id="intro">
+    <p class="section-label">Overview</p>
+    <h2>What is EpiSegMix?</h2>
+    <p class="intro-text">EpiSegMix is a Nextflow pipeline for chromatin segmentation. It uses a <strong style="color:var(--text-bright)">hidden Markov model (HMM)</strong> to annotate genomic regions with functional states — such as enhancers and promoters — based on combinations of epigenetic modifications, capturing spatial relations via transition probabilities.</p>
+    <p>The C++ backend allows users to select flexible statistical distributions for histone modifications. Parameters are optimized via <strong style="color:var(--text-bright)">Baum-Welch training</strong> and ROOT's Migrad minimizer, followed by Viterbi or posterior decoding to assign the most likely chromatin states.</p>
+
+    <!-- PIPELINE STEPS -->
+    <h3>Pipeline Architecture</h3>
+    <div class="steps">
+      <div class="step">
+        <div class="step-line"><div class="step-num">1</div><div class="step-connector"></div></div>
+        <div class="step-body"><h4>Setup &amp; Pre-processing</h4><p><code>input_check.nf</code>, <code>prepare_genome.nf</code>, <code>generate_bins.nf</code> — validates the samplesheet, prepares reference genomes, and creates fixed-size genomic bins.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-line"><div class="step-num">2</div><div class="step-connector"></div></div>
+        <div class="step-body"><h4>Data Processing</h4><p><code>process_histones.nf</code>, <code>process_methyl.nf</code> — dynamically processes provided .bam (ChIP/ATAC-seq) and .bed (WGBS/NOMe-seq) files.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-line"><div class="step-num">3</div><div class="step-connector"></div></div>
+        <div class="step-body"><h4>Data Merging</h4><p><code>merge_data.nf</code> — combines modalities prior to training when <code>--merge true</code> is set.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-line"><div class="step-num">4</div><div class="step-connector"></div></div>
+        <div class="step-body"><h4>Model Training &amp; Decoding</h4><p>Runs one of four modules based on the <code>--episegmix_mode</code> flag. See the Analysis Modules section below.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK START -->
+  <section id="quickstart">
+    <p class="section-label">Quick Start</p>
+    <h2>Getting Started</h2>
+    <p>Install <a href="https://www.nextflow.io/docs/latest/getstarted.html#installation">Nextflow</a> (≥22.10.1) and either <a href="https://docs.docker.com/engine/installation/">Docker</a> or <a href="https://singularity.lbl.gov/all-releases">Singularity</a>, then clone the repository.</p>
+
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+        <span class="code-title">bash — clone & test</span>
+      </div>
+      <pre>git clone https://github.com/epigenetics-sb/EpiSegMix.git
+cd EpiSegMix
+
+<span class="comment"># Run the test profile</span>
+nextflow run main.nf -profile test,docker</pre>
+    </div>
+
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+        <span class="code-title">bash — standard analysis</span>
+      </div>
+      <pre>nextflow run main.nf <span class="flag">-profile</span> docker \
+    <span class="flag">--input</span>           <span class="val">samplesheet.csv</span> \
+    <span class="flag">--episegmix_mode</span>  <span class="val">standard</span> \
+    <span class="flag">--states</span>          <span class="val">8</span> \
+    <span class="flag">--outdir</span>          <span class="val">./results</span></pre>
+    </div>
+
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+        <span class="code-title">bash — advanced run (duration mode + merging)</span>
+      </div>
+      <pre>nextflow run main.nf <span class="flag">-profile</span> docker \
+    <span class="flag">--input</span>              <span class="val">samplesheet.csv</span> \
+    <span class="flag">--episegmix_mode</span>     <span class="val">duration</span> \
+    <span class="flag">--merge</span>              <span class="val">true</span> \
+    <span class="flag">--states</span>             <span class="val">8</span> \
+    <span class="flag">--genome</span>             <span class="val">hg38</span> \
+    <span class="flag">--binsize</span>            <span class="val">200</span> \
+    <span class="flag">--decoding_algorithm</span> <span class="val">viterbi</span> \
+    <span class="flag">--dist_histone</span>       <span class="val">NBI</span> \
+    <span class="flag">--dist_methyl</span>        <span class="val">BI</span> \
+    <span class="flag">--outdir</span>             <span class="val">./results_duration</span></pre>
+    </div>
+
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+        <span class="code-title">bash — multi-state evaluation</span>
+      </div>
+      <pre>nextflow run main.nf <span class="flag">-profile</span> docker \
+    <span class="flag">--input</span>   <span class="val">samplesheet.csv</span> \
+    <span class="flag">--states</span>  <span class="val">8,9,10</span> \
+    <span class="flag">--outdir</span>  <span class="val">./results_multistate</span></pre>
+    </div>
+  </section>
+
+  <!-- SAMPLESHEET -->
+  <section id="input">
+    <p class="section-label">Documentation</p>
+    <h2>Input Samplesheet</h2>
+    <p>Provide a comma-separated <code>samplesheet.csv</code> with these exact columns:</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>sample_id</th><th>replicate</th><th>epigenetic_mark</th><th>file_name</th><th>modality</th><th>paired_end</th><th>distribution</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>sample_01</td><td>1</td><td>H3K27ac</td><td>data/file.bam</td><td>ChIP-seq</td><td>true</td><td>NBI</td>
+          </tr>
+          <tr>
+            <td>sample_02</td><td>1</td><td>WGBS</td><td>data/file.bed</td><td>WGBS</td><td>false</td><td>BI</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Path Recommendations</h3>
+    <p>Use <strong style="color:var(--text-bright)">relative paths</strong> (e.g., <code>data/file.bam</code>) relative to your project directory for better portability and pipeline mounting. Absolute paths are also supported for fixed external storage locations.</p>
+
+    <h3>File Format Notes</h3>
+    <p>ChIP-seq/ATAC-seq require <code>.bam</code> files. WGBS/NOMe-seq require <code>.bed</code> or <code>.bed.gz</code> files. No need to sort or index BAM files — the pipeline handles this automatically. BED files must follow a standard 11-column format:</p>
+
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+        <span class="code-title">BED format — 11 columns</span>
+      </div>
+      <pre>1  10468  10469  100.00  2  +  10468  10469  210,0,0  0  100.00</pre>
+    </div>
+  </section>
+
+  <!-- ANALYSIS MODULES -->
+  <section id="modes">
+    <p class="section-label">Modes</p>
+    <h2>Analysis Modules</h2>
+    <p>Select a module via the <code>--episegmix_mode</code> flag:</p>
+    <div class="modules-grid">
+      <div class="module-card">
+        <div class="module-tag">standard</div>
+        <h4>Standard</h4>
+        <p>Default mode. Standard transition probabilities without explicit duration constraints.</p>
+      </div>
+      <div class="module-card">
+        <div class="module-tag">duration</div>
+        <h4>Duration</h4>
+        <p>Topology-based HMM modeling chromatin state lengths for improved spatial resolution.</p>
+      </div>
+      <div class="module-card">
+        <div class="module-tag">DNA</div>
+        <h4>DNA</h4>
+        <p>Segmentation utilizing purely DNA methylation data.</p>
+      </div>
+      <div class="module-card">
+        <div class="module-tag">fitting</div>
+        <h4>Fitting</h4>
+        <p>Identifies best-fitting statistical distributions and outputs an updated <code>fitted_samplesheet.csv</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARAMETERS -->
+  <section id="params">
+    <p class="section-label">Configuration</p>
+    <h2>Key Parameters</h2>
+
+    <div class="param-section">
+      <div class="param-group-title">Core Inputs &amp; Outputs</div>
+      <div class="param-row"><span class="param-name">--input</span><span class="param-default">./samplesheet.csv</span><span class="param-desc">Path to the samplesheet.</span></div>
+      <div class="param-row"><span class="param-name">--outdir</span><span class="param-default">./results</span><span class="param-desc">Output directory.</span></div>
+    </div>
+
+    <div class="param-section">
+      <div class="param-group-title">Model Configuration</div>
+      <div class="param-row"><span class="param-name">--episegmix_mode</span><span class="param-default">standard</span><span class="param-desc">Module selection: <code>standard</code>, <code>duration</code>, <code>DNA</code>, or <code>fitting</code>.</span></div>
+      <div class="param-row"><span class="param-name">--states</span><span class="param-default">8</span><span class="param-desc">Number of states (single int or comma-separated list, e.g., <code>8,9,10</code>).</span></div>
+      <div class="param-row"><span class="param-name">--genome</span><span class="param-default">hg38</span><span class="param-desc">Reference genome assembly.</span></div>
+      <div class="param-row"><span class="param-name">--binsize</span><span class="param-default">200</span><span class="param-desc">Genome bin size in base pairs (bp).</span></div>
+      <div class="param-row"><span class="param-name">--merge</span><span class="param-default">false</span><span class="param-desc">Merge replicates/modalities before training.</span></div>
+    </div>
+
+    <div class="param-section">
+      <div class="param-group-title">Algorithmic Settings</div>
+      <div class="param-row"><span class="param-name">--decoding_algorithm</span><span class="param-default">viterbi</span><span class="param-desc">State decoding method: <code>viterbi</code> or <code>posterior</code>.</span></div>
+      <div class="param-row"><span class="param-name">--chr_parameter_estimation</span><span class="param-default">pilot_hg38</span><span class="param-desc">Chromosome(s) used for parameter estimation.</span></div>
+      <div class="param-row"><span class="param-name">--iter</span><span class="param-default">200</span><span class="param-desc">Max iterations for Baum-Welch training.</span></div>
+      <div class="param-row"><span class="param-name">--epsilon</span><span class="param-default">1</span><span class="param-desc">Convergence threshold.</span></div>
+      <div class="param-row"><span class="param-name">--adjustment</span><span class="param-default">2</span><span class="param-desc">Parameter estimation adjustment factor.</span></div>
+    </div>
+
+    <div class="param-section">
+      <div class="param-group-title">Statistical Distributions</div>
+      <div class="param-row"><span class="param-name">--dist_histone</span><span class="param-default">NBI</span><span class="param-desc">Histone count distribution: <code>PO</code>, <code>BI</code>, or <code>NBI</code>.</span></div>
+      <div class="param-row"><span class="param-name">--dist_methyl</span><span class="param-default">BI</span><span class="param-desc">Methylation count distribution: <code>BI</code> or <code>BB</code>.</span></div>
+    </div>
+
+    <h3>HPC / Slurm Execution</h3>
+    <p>EpiSegMix is highly scalable and includes a built-in Slurm profile. Use Singularity on HPC clusters:</p>
+    <div class="code-block">
+      <div class="code-header">
+        <div class="code-dots"><span class="dot-r"></span><span class="dot-y"></span><span class="dot-g"></span></div>
+        <span class="code-title">bash — HPC (Slurm + Singularity)</span>
+      </div>
+      <pre>nextflow run main.nf <span class="flag">-profile</span> singularity,slurm \
+    <span class="flag">--input</span>  <span class="val">samplesheet.csv</span> \
+    <span class="flag">--outdir</span> <span class="val">./results</span></pre>
+    </div>
+  </section>
+
+  <!-- OUTPUTS -->
+  <section id="outputs">
+    <p class="section-label">Outputs</p>
+    <h2>Results</h2>
+    <p>Results are saved in your defined <code>--outdir</code>:</p>
+    <ul class="output-list">
+      <li>
+        <span class="output-icon">📊</span>
+        <div>
+          <div class="output-path">EpiSegMix/{id}/Plots/{id}.html</div>
+          <div class="output-desc"><strong>Main Summary Report</strong> — interactive emission matrices and state distribution visualizations.</div>
+        </div>
+      </li>
+      <li>
+        <span class="output-icon">🗂️</span>
+        <div>
+          <div class="output-path">EpiSegMix/{id}/Segmentation/{id}.bed.gz</div>
+          <div class="output-desc">Final chromatin segmentation file (compressed BED).</div>
+        </div>
+      </li>
+      <li>
+        <span class="output-icon">🧠</span>
+        <div>
+          <div class="output-path">EpiSegMix/{id}/Models/{id}.model.json</div>
+          <div class="output-desc">Trained HMM parameters in JSON format.</div>
+        </div>
+      </li>
+      <li>
+        <span class="output-icon">⚙️</span>
+        <div>
+          <div class="output-path">EpiSegMix/Fitting/fitted_samplesheet.csv</div>
+          <div class="output-desc">Generated <em>only</em> in <code>fitting</code> mode — auto-optimized samplesheet with best-fit distributions.</div>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- CITATIONS -->
+  <section id="citations">
+    <p class="section-label">Citations</p>
+    <h2>If You Use EpiSegMix</h2>
+    <p>Please cite the following publications:</p>
+    <ul class="cite-list">
+      <li>
+        <div class="cite-num">[1]</div>
+        Schmitz, J. E., et al. (2023). EpiSegMix: a flexible distribution hidden Markov model with duration modeling for chromatin state discovery. <em>Bioinformatics</em>. <a href="https://doi.org/10.1093/bioinformatics/btae178">doi: 10.1093/bioinformatics/btae178</a>
+      </li>
+      <li>
+        <div class="cite-num">[2]</div>
+        Aggarwal, N., et al. (2025). Integrated flexible DNA methylation-chromatin segmentation modeling enhances epigenomic state annotation. <em>bioRxiv</em>. <a href="https://doi.org/10.1101/2025.07.25.666820">doi: 10.1101/2025.07.25.666820</a>
+      </li>
+    </ul>
+
+    <h3>Support &amp; Contributions</h3>
+    <p>For bugs, questions, or feature requests, please open an issue on the <a href="https://github.com/epigenetics-sb/EpiSegMix/issues">EpiSegMix GitHub Issues page</a>. Core Developer: Aaryan Jaitly (<a href="https://github.com/aaryanjaitly">@aaryanjaitly</a>).</p>
+  </section>
+
+</div>
+
+<footer>
+  <p>EpiSegMix · Nextflow · C++ HMM Backend · <a href="https://github.com/epigenetics-sb/EpiSegMix">github.com/epigenetics-sb/EpiSegMix</a></p>
+</footer>
+
+</body>
+</html>
