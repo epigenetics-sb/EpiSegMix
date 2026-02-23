@@ -134,7 +134,9 @@ Results are saved in your defined \--outdir:
 
 For bugs, questions, or feature requests, please open an issue on the [EpiSegMix GitHub Issues page](https://www.google.com/search?q=https://github.com/epigenetics-sb/EpiSegMix/issues).  
 **Core Developer:** Aaryan Jaitly (@aaryanjaitly)
+
 Incase of queries please contact Nihit Aggarwal: nihit.aggarwal@uni-saarland.de 
+
 ## **Citations**
 
 If you use EpiSegMix for your research, please cite:
