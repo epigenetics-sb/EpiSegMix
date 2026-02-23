@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EpiSegMix — Chromatin Segmentation Pipeline</title>
+  <title>EpiSegMix — Epigenome Segmentation Pipeline</title>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -522,7 +522,7 @@
   <section id="intro">
     <p class="section-label">Overview</p>
     <h2>What is EpiSegMix?</h2>
-    <p class="intro-text">EpiSegMix is a Nextflow pipeline for chromatin segmentation. It uses a <strong style="color:var(--text-bright)">hidden Markov model (HMM)</strong> to annotate genomic regions with functional states — such as enhancers and promoters — based on combinations of epigenetic modifications, capturing spatial relations via transition probabilities.</p>
+    <p class="intro-text">EpiSegMix is a Nextflow implementation of the original Snakemake-based EpiSegMix pipeline [1] for epigenome segmentation. It uses a <strong style="color:var(--text-bright)">hidden Markov model (HMM)</strong> to annotate genomic regions with functional states — such as enhancers and promoters — based on combinations of epigenetic modifications, capturing spatial relations via transition probabilities.</p>
     <p>The C++ backend allows users to select flexible statistical distributions for histone modifications. Parameters are optimized via <strong style="color:var(--text-bright)">Baum-Welch training</strong> and ROOT's Migrad minimizer, followed by Viterbi or posterior decoding to assign the most likely chromatin states.</p>
 
     <!-- PIPELINE STEPS -->
@@ -776,7 +776,8 @@ nextflow run main.nf -profile test,docker</pre>
     </ul>
 
     <h3>Support &amp; Contributions</h3>
-    <p>For bugs, questions, or feature requests, please open an issue on the <a href="https://github.com/epigenetics-sb/EpiSegMix/issues">EpiSegMix GitHub Issues page</a>. Core Developer: Aaryan Jaitly (<a href="https://github.com/aaryanjaitly">@aaryanjaitly</a>).</p>
+    <p>For bug reports, questions, or feature requests, please open an issue on the <a href="https://github.com/epigenetics-sb/EpiSegMix/issues">EpiSegMix GitHub Issues page</a>. You may also contact <a href="mailto:nihit.aggarwal@uni-saarland.de">Nihit Aggarwal</a> directly. Core Developer: Aaryan Jaitly (<a href="https://github.com/aaryanjaitly">@aaryanjaitly</a>).</p>
+
   </section>
 
 </div>
