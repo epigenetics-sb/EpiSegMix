@@ -1,124 +1,144 @@
-# EpiSegMix Pipeline
----
-This repository contains a Nextflow workflow for chromatin segmentation to annotate both coding and non-coding regions of the genome.
-EpiSegMix first estimates the parameters of a hidden Markov model, where each state corresponds to a different combination of epigenetic modifications and thus represents a functional role, such as enhancer, transcription start site, active or silent gene. The spatial relations are captured via the transition probabolities. After the parameter estimation, each region in the genome is annotated with the most likely chromatin state. The implementation allows to choose for each histone modification a different distributional assumption (the available distributions are listed below). Similar tools are ChromHMM or EpiCSeg (references [2] and [3]).
-The implementation of the HMM is in C++. The parameters are estimated using the Baum-Welch algorithm and for decoding the user can select either the Viterbi algorithm or posterior decoding. For all distributions where the MLE contains no closed form solution, the parameters are updated by numerical optimization using the Migrad minimizer from ROOT (https://root.cern/root/htmldoc/guides/minuit2/Minuit2Letter.pdf). The initial parameters of the HMM are found using k-Means clustering. Each cluster is assumed to correspond to one state and the parameters are initialized using method of moment estimates.
+# **EpiSegMix**
 
-- Aaryan Jaitly @aaryanjaitly (core developer)
+**A Nextflow workflow for chromatin segmentation to annotate coding and non-coding genomic regions.**
 
-## Quick Start
+## **Introduction**
 
-1. **Install Nextflow** (≥22.10) and **Docker** (or Singularity).
-2. **Clone & Run Test:**
+**EpiSegMix** is a Nextflow pipeline for chromatin segmentation. It uses a hidden Markov model (HMM) to annotate genomic regions with functional states (e.g., enhancers, promoters) based on combinations of epigenetic modifications, capturing spatial relations via transition probabilities.  
+The C++ backend allows users to select flexible statistical distributions for histone modifications. Parameters are optimized via Baum-Welch training and ROOT's Migrad minimizer, followed by Viterbi or posterior decoding to assign the most likely chromatin states.
 
-```bash
-git clone https://github.com/epigenetics-sb/EpiSegMix.git 
-cd EpiSegMix 
+## **Pipeline Summary**
 
-# Run with test data
-nextflow run main.nf -profile test,docker
-# or
-nextflow run main.nf -profile test,singularity
-```
+EpiSegMix uses a modular architecture that dynamically executes subworkflows based on your inputs:
 
----
+* **Setup & Pre-processing** (input\_check.nf, prepare\_genome.nf, generate\_bins.nf): Validates the samplesheet, prepares reference genomes, and creates fixed-size genomic bins.  
+* **Data Processing** (process\_histones.nf, process\_methyl.nf): Dynamically processes provided .bam (ChIP/ATAC-seq) and .bed (WGBS/NOMe-seq) files.  
+* **Data Merging** (merge\_data.nf): Combines modalities prior to training if \--merge true is set.  
+* **Model Training & Decoding**: Runs one of four modules based on the \--episegmix\_mode flag:  
+  * **standard** (model\_training\_std.nf): Standard Baum-Welch training and decoding.  
+  * **duration** (model\_training\_dm.nf): Topology-based duration modeling HMM.  
+  * **DNA** (model\_training\_dna.nf): Segmentation solely on DNA methylation data.  
+  * **fitting** (distribution\_fitting.nf): Empirically determines best-fitting distributions and generates an optimized samplesheet for downstream training.
 
-## Input: `samplesheet.csv`
+## **Quick Start**
 
-Create a file named `samplesheet.csv` with these exact columns:
+1. Install [Nextflow](https://www.google.com/search?q=https://www.nextflow.io/docs/latest/getstarted.html%23installation) (\>=22.10.1) and either [Docker](https://docs.docker.com/engine/installation/) or [Singularity](https://singularity.lbl.gov/all-releases).  
+2. Clone the repository:  
+   git clone [https://github.com/epigenetics-sb/EpiSegMix.git](https://github.com/epigenetics-sb/EpiSegMix.git)  
+   cd EpiSegMix
 
-| Column | Description | Example |
-| --- | --- | --- |
-| `sample_id` | Unique ID for the sample | `sample_01` |
-| `replicate` | Replicate number | `1` |
-| `epigenetic_mark` | Mark name (H3K4me3, WGBS, etc.) | `H3K27ac` |
-| `file_name` | Absolute path to BAM or BED file | `/data/file.bam` |
-| `modality` | `ChIP-seq`, `WGBS`, `ATAC-seq` | `ChIP-seq` |
-| `paired_end` | `true` or `false` | `true` |
+3. Run the test profile:  
+   nextflow run main.nf \-profile test,docker
 
-> **Note:** File paths must exist on your filesystem and match the modality:
-> - ChIP-seq / ATAC-seq → `.bam`  
-> - WGBS / NOMe-seq → `.bed` or `.bed.gz`  
+4. **Standard Analysis:**  
+   nextflow run main.nf \-profile docker \\  
+       \--input samplesheet.csv \\  
+       \--episegmix\_mode standard \\  
+       \--states 8 \\  
+       \--outdir ./results
 
----
+5. **Advanced Run (Duration Mode \+ Merging):**  
+   nextflow run main.nf \-profile docker \\  
+       \--input samplesheet.csv \\  
+       \--episegmix\_mode duration \\  
+       \--merge true \\  
+       \--states 8 \\  
+       \--genome hg38 \\  
+       \--binsize 200 \\  
+       \--decoding\_algorithm viterbi \\  
+       \--dist\_histone NBI \\  
+       \--dist\_methyl BI \\  
+       \--outdir ./results\_duration
 
-## Usage
+6. **Multiple States Run:** Evaluate multiple models in a single run by passing a comma-separated list:  
+   nextflow run main.nf \-profile docker \\  
+       \--input samplesheet.csv \\  
+       \--states 8,9,10 \\  
+       \--outdir ./results\_multistate
 
-### Standard Mode (Default)
+## **Documentation**
 
-```bash
-nextflow run main.nf \
-    -profile docker \
-    --input samplesheet.csv \
-    --episegmix_mode standard \
-    --states 8 \
-    --outdir ./results
-```
+### **Input Samplesheet**
 
-### Duration Modeling Mode
+Provide a comma-separated samplesheet.csv with these exact columns:
 
-Uses topology-based HMM to model state duration.
+| sample\_id | replicate | epigenetic\_mark | file\_name | modality | paired\_end | distribution |
+| :---- | :---- | :---- | :---- | :---- | :---- | :---- |
+| sample\_01 | 1 | H3K27ac | data/file.bam | ChIP-seq | true | NBI |
+| sample\_02 | 1 | WGBS | data/file.bed | WGBS | false | BI |
 
-```bash
-nextflow run main.nf \
-    -profile docker \
-    --input samplesheet.csv \
-    --episegmix_mode duration \
-    --states 8 \
-    --outdir ./results_dm
-```
+**Path Recommendations:**
 
----
+* **Recommended:** Use **relative paths** (e.g., data/file.bam) relative to your project directory for better portability and pipeline mounting.  
+* **Alternative:** You may use **absolute paths** if your data is stored in fixed external storage locations.
 
-##  Key Outputs
+**Notes:**
 
-Results are saved in your output directory:
+* ChIP-seq/ATAC-seq require .bam files.  
+* WGBS/NOMe-seq require .bed or .bed.gz files.  
+* Use the distribution column to specify a statistical model (e.g., NBI, BI). Unsure which to use? Run the fitting module to auto-generate this column.
 
-* **`EpiSegMix/{id}/Plots/{id}.html`**: **Main Summary Report** (start here).  
-* **`EpiSegMix/{id}/Segmentation/{id}.bed.gz`**:  Final chromatin segmentation file.  
-* **`EpiSegMix/{id}/Models/{id}.model.json`**:  Trained model parameters.
+### **Input File Formats & Pre-processing**
 
----
+EpiSegMix minimizes manual pre-processing:
 
-## Key Parameters
+* **BAM Files:** No need to sort or index prior to running. The pipeline automatically cleans alignments, standardizes chromosome prefixes, sorts, and indexes (.bai) the data.  
+* **BED Files:** Must follow a standard 11-column format containing methylation percentages and coverage metrics:  
+  1  10468  10469  100.00  2  \+  10468  10469  210,0,0  0  100.00
 
-| Flag | Default | Description |
-| --- | --- | --- |
-| `--episegmix_mode` | `standard` | Select `standard` or `duration`. |
-| `--states` | `8` | Number of chromatin states. |
-| `--genome` | `hg38` | Reference genome (e.g., `mm10`, `hg19`). |
-| `--merge` | `false` | Merge replicates/modalities before training. |
-| `--binsize` | `200` | Genome bin size in bp. |
-| `--dist_histone` | `NBI` | Distribution for histone counts (Poisson, BI, NBI, etc.). |
-| `--dist_methyl` | `BI` | Distribution for methylation counts (BI or BB only). |
-| `--chr_parameter_estimation` | `pilot_hg38` | Chromosome parameter estimation (string or int). |
-| `--decoding_algorithm` | `viterbi` | Algorithm for decoding states (`viterbi`). |
-| `--outdir` | `./results` | Output directory for all results. |
+### **Analysis Modules (--episegmix\_mode)**
 
----
+1. **standard**: Default mode. Standard transition probabilities without explicit duration constraints.  
+2. **duration**: Topology-based HMM modeling chromatin state lengths for improved spatial resolution.  
+3. **DNA**: Segmentation utilizing purely DNA methylation data.  
+4. **fitting**: Identifies best-fitting statistical distributions and outputs an updated fitted\_samplesheet.csv containing the optimal models for your data.
 
-## Notes
+### **Key Parameters**
 
-* Use **absolute paths** for input files.  
-* Docker or Singularity will automatically mount the pipeline directory.  
-* For testing, use the `-profile test,docker` profile.  
+| Parameter | Default | Description |
+| :---- | :---- | :---- |
+| **Core Inputs & Outputs** |  |  |
+| \--input | ./samplesheet.csv | Path to the samplesheet. |
+| \--outdir | ./results | Output directory. |
+| **Model Configuration** |  |  |
+| \--episegmix\_mode | standard | Module selection (standard, duration, DNA, or fitting). |
+| \--states | 8 | Number of states (single int or comma-separated list, e.g., 8,9,10). |
+| \--genome | hg38 | Reference genome assembly. |
+| \--binsize | 200 | Genome bin size in base pairs (bp). |
+| \--merge | false | Merge replicates/modalities before training. |
+| **Algorithmic Settings** |  |  |
+| \--decoding\_algorithm | viterbi | State decoding method (viterbi or posterior). |
+| \--chr\_parameter\_estimation | pilot\_hg38 | Chromosome(s) used for parameter estimation. |
+| \--iter | 200 | Max iterations for Baum-Welch training. |
+| \--epsilon | 1 | Convergence threshold. |
+| \--adjustment | 2 | Parameter estimation adjustment factor. |
+| **Statistical Distributions** |  |  |
+| \--dist\_histone | NBI | Histone count distribution (e.g., PO, BI, NBI). |
+| \--dist\_methyl | BI | Methylation count distribution (BI or BB). |
 
-## Citation
+### **Advanced Execution**
 
-For a full description and for citing use, please cite the following article on
+**HPC Clusters (Slurm):** EpiSegMix is highly scalable and includes a built-in slurm profile. When running on an HPC, it is highly recommended to use **Singularity**:  
+nextflow run main.nf \-profile singularity,slurm \--input samplesheet.csv \--outdir ./results
 
-> Schmitz, J. E., Aggarwal, N., Laufer, L. et al. 2023. EpiSegMix: a flexible distribution hidden Markov model with duration modeling for chromatin state discovery, <https://doi.org/10.1093/bioinformatics/btae178>
+### **Outputs**
 
-> Aggarwal, N., Schmitz, J. E., Laufer, L., Rahmann, S., Walter, J., & Salhab, A. (2025). Integrated flexible DNA methylation-chromatin segmentation modeling enhances epigenomic state annotation. bioRxiv, 2025-07, <https://doi.org/10.1101/2025.07.25.666820>
+Results are saved in your defined \--outdir:
 
+* EpiSegMix/{id}/Plots/{id}.html: **Main Summary Report** (interactive emission matrices/state distributions).  
+* EpiSegMix/{id}/Segmentation/{id}.bed.gz: Final segmentation file.  
+* EpiSegMix/{id}/Models/{id}.model.json: Trained HMM parameters.  
+* EpiSegMix/Fitting/fitted\_samplesheet.csv: Generated *only* in fitting mode.
 
+## **Support & Contributions**
 
-## References
+For bugs, questions, or feature requests, please open an issue on the [EpiSegMix GitHub Issues page](https://www.google.com/search?q=https://github.com/epigenetics-sb/EpiSegMix/issues).  
+**Core Developer:** Aaryan Jaitly (@aaryanjaitly)
+Incase of queries please contact Nihit Aggarwal: nihit.aggarwal@uni-saarland.de 
+## **Citations**
 
-[1] Mölder, F., Jablonski, K.P., Letcher, B. et al. 2021. Sustainable data analysis with Snakemake. F1000Res 10, 33 <https://f1000research.com/articles/10-33>.
+If you use EpiSegMix for your research, please cite:
 
-[2] Ernst, J., and Kellis, M. (2010). “Discovery and characterization of chromatin states for systematic annotation of the human genome,” Nature Biotechnology 28(8), 817–825, doi: <https://doi.org/10.1038/nbt.1662>.
+1. Schmitz, J. E., et al. (2023). EpiSegMix: a flexible distribution hidden Markov model with duration modeling for chromatin state discovery. *Bioinformatics*. doi: [10.1093/bioinformatics/btae178](https://doi.org/10.1093/bioinformatics/btae178)  
+2. Aggarwal, N., et al. (2025). Integrated flexible DNA methylation-chromatin segmentation modeling enhances epigenomic state annotation. *bioRxiv*. doi: [10.1101/2025.07.25.666820](https://doi.org/10.1101/2025.07.25.666820)
 
-[3] Mammana, A., and Chung, H.-R. (2015). “Chromatin segmentation based on a probabilistic model for read counts explains a large portion of the epigenome,” Genome Biology 16(1), 151, doi:<https://doi.org/10.1186/s13059-015-0708-z>.
-
-[4] Mammana A, and Helmuth J (2023). bamsignals: Extract read count signals from bam files. R package version 1.32.0, https://github.com/lamortenera/bamsignals. 
