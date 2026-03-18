@@ -1,0 +1,844 @@
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -Aa 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -Aa 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -Aa 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -Aa 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -Aa 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -D__CLASSIC_C__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags:  
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: -c 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --c++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --ec++ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+Build flags: 
+Id flags: -c;-I__does_not_exist__ 
+
+The output was:
+No such file or directory
+
+
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":

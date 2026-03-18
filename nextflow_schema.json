@@ -21,13 +21,15 @@
                     "pattern": "^\\S+\\.csv$",
                     "description": "Path to comma-separated file containing information about the samples in the experiment.",
                     "help_text": "You will need to create a design file with information about the samples in your experiment before running the pipeline. Use this parameter to specify its location. It has to be a comma-separated file with 3 columns, and a header row. See [usage docs](https://nf-co.re/episegmix/usage#samplesheet-input).",
-                    "fa_icon": "fas fa-file-csv"
+                    "fa_icon": "fas fa-file-csv",
+                    "default": "./samplesheet.csv"
                 },
                 "outdir": {
                     "type": "string",
                     "format": "directory-path",
                     "description": "The output directory where the results will be saved. You have to use absolute paths to storage on Cloud infrastructure.",
-                    "fa_icon": "fas fa-folder-open"
+                    "fa_icon": "fas fa-folder-open",
+                    "default": "./results"
                 },
                 "email": {
                     "type": "string",
@@ -35,11 +37,121 @@
                     "fa_icon": "fas fa-envelope",
                     "help_text": "Set this parameter to your e-mail address to get a summary e-mail with details of the run sent to you when the workflow exits. If set in your user config file (`~/.nextflow/config`) then you don't need to specify this on the command line for every run.",
                     "pattern": "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$"
+                }
+            }
+        },
+        "episegmix_options": {
+            "title": "EpiSegMix options",
+            "type": "object",
+            "fa_icon": "fas fa-layer-group",
+            "description": "Parameters specific to the EpiSegMix algorithm configuration.",
+            "properties": {
+                "standard": {
+                    "type": "boolean",
+                    "description": "Run the standard HMM model (default).",
+                    "fa_icon": "fas fa-cogs",
+                    "default": false
                 },
-                "multiqc_title": {
+                "duration": {
+                    "type": "boolean",
+                    "description": "Run the duration HMM (DM) model to account for segment length.",
+                    "fa_icon": "fas fa-stopwatch",
+                    "default": false
+                },
+                "dna": {
+                    "type": "boolean",
+                    "description": "Run the DNA methylation mode.",
+                    "fa_icon": "fas fa-dna",
+                    "default": false
+                },
+                "fitting": {
+                    "type": "boolean",
+                    "description": "Run the distribution fitting mode to find optimal statistical distributions.",
+                    "fa_icon": "fas fa-chart-line",
+                    "default": false
+                },
+                "best_fit_segmentation": {
+                    "type": "boolean",
+                    "description": "Automatically run standard segmentation using the best-fit distributions after 'fitting' mode completes.",
+                    "fa_icon": "fas fa-project-diagram",
+                    "default": false
+                },
+                "episegmix_mode": {
                     "type": "string",
-                    "description": "MultiQC report title. Printed as page header, used for filename if not otherwise specified.",
-                    "fa_icon": "fas fa-file-signature"
+                    "default": "standard",
+                    "enum": ["standard", "duration", "DNA", "fitting"],
+                    "description": "Legacy parameter for EpiSegMix operating mode. Overridden by specific boolean flags (e.g., --fitting).",
+                    "fa_icon": "fas fa-cog",
+                    "hidden": true
+                },
+                "distributions": {
+                    "type": "string",
+                    "description": "Comma-separated list of statistical distributions to test during 'fitting' mode (e.g., 'NBI,P,ZINB').",
+                    "fa_icon": "fas fa-chart-line",
+                    "default": "NBI,SI,BNB"
+                },
+                "binsize": {
+                    "type": "integer",
+                    "default": 200,
+                    "description": "Genomic bin size in base pairs used for discretising the genome.",
+                    "fa_icon": "fas fa-ruler-horizontal"
+                },
+                "states": {
+                    "type": ["integer", "string"],
+                    "default": "8",
+                    "description": "Number of chromatin states in the HMM model.",
+                    "fa_icon": "fas fa-sort-numeric-up"
+                },
+                "merge": {
+                    "type": "boolean",
+                    "description": "Merge adjacent segments with the same chromatin state label.",
+                    "fa_icon": "fas fa-code-branch"
+                },
+                "decoding": {
+                    "type": "string",
+                    "default": "viterbi",
+                    "enum": ["viterbi", "posterior"],
+                    "description": "Decoding algorithm for inferring the most likely chromatin state sequence.",
+                    "fa_icon": "fas fa-calculator"
+                },
+                "adjustment": {
+                    "type": "integer",
+                    "default": 2,
+                    "description": "Adjustment parameter for emission probability smoothing.",
+                    "hidden": true,
+                    "fa_icon": "fas fa-sliders-h"
+                },
+                "iter": {
+                    "type": "integer",
+                    "default": 200,
+                    "description": "Maximum number of iterations for model training.",
+                    "hidden": true,
+                    "fa_icon": "fas fa-redo"
+                },
+                "epsilon": {
+                    "type": "number",
+                    "default": 1,
+                    "description": "Convergence threshold for the algorithm.",
+                    "hidden": true,
+                    "fa_icon": "fas fa-equals"
+                },
+                "chr_parameter_estimation": {
+                    "type": ["string", "integer"],
+                    "default": "12",
+                    "description": "Chromosome used for initial parameter estimation. Specify by index or name.",
+                    "fa_icon": "fas fa-dna"
+                },
+                "dist_histone": {
+                    "type": "string",
+                    "default": "NBI",
+                    "description": "Default distribution model for histone modification counts if not specified in the samplesheet (e.g. NBI for negative binomial).",
+                    "fa_icon": "fas fa-chart-bar"
+                },
+                "dist_methyl": {
+                    "type": "string",
+                    "default": "BI",
+                    "description": "Default distribution model for DNA methylation levels if not specified in the samplesheet (e.g. BI for beta-binomial).",
+                    "fa_icon": "fas fa-chart-bar"
                 }
             }
         },
@@ -53,29 +165,21 @@
                     "type": "string",
                     "description": "Name of iGenomes reference.",
                     "fa_icon": "fas fa-book",
-                    "help_text": "If using a reference genome configured in the pipeline using iGenomes, use this parameter to give the ID for the reference. This is then used to build the full paths for all required reference genome files e.g. `--genome GRCh38`. \n\nSee the [nf-core website docs](https://nf-co.re/usage/reference_genomes) for more details."
-                },
-                "fasta": {
-                    "type": "string",
-                    "format": "file-path",
-                    "exists": true,
-                    "mimetype": "text/plain",
-                    "pattern": "^\\S+\\.fn?a(sta)?(\\.gz)?$",
-                    "description": "Path to FASTA genome file.",
-                    "help_text": "This parameter is *mandatory* if `--genome` is not specified. If you don't have a BWA index available this will be generated for you automatically. Combine with `--save_reference` to save BWA index for future runs.",
-                    "fa_icon": "far fa-file-code"
+                    "help_text": "If using a reference genome configured in the pipeline using iGenomes, use this parameter to give the ID for the reference. This is then used to build the full paths for all required reference genome files e.g. `--genome GRCh38`. \n\nSee the [nf-core website docs](https://nf-co.re/usage/reference_genomes) for more details.",
+                    "default": "hg38"
                 },
                 "igenomes_ignore": {
                     "type": "boolean",
                     "description": "Do not load the iGenomes reference config.",
                     "fa_icon": "fas fa-ban",
                     "hidden": true,
-                    "help_text": "Do not load `igenomes.config` when running the pipeline. You may choose this option if you observe clashes between custom parameters and those supplied in `igenomes.config`."
+                    "help_text": "Do not load `igenomes.config` when running the pipeline. You may choose this option if you observe clashes between custom parameters and those supplied in `igenomes.config`.",
+                    "default": true
                 },
                 "igenomes_base": {
                     "type": "string",
                     "format": "directory-path",
-                    "description": "The base path to the igenomes reference files",
+                    "description": "The base path to the igenomes reference files.",
                     "fa_icon": "fas fa-ban",
                     "hidden": true,
                     "default": "s3://ngi-igenomes/igenomes/"
@@ -166,14 +270,6 @@
                     "fa_icon": "fas fa-remove-format",
                     "hidden": true
                 },
-                "max_multiqc_email_size": {
-                    "type": "string",
-                    "description": "File size limit when attaching MultiQC reports to summary emails.",
-                    "pattern": "^\\d+(\\.\\d+)?\\.?\\s*(K|M|G|T)?B$",
-                    "default": "25.MB",
-                    "fa_icon": "fas fa-file-upload",
-                    "hidden": true
-                },
                 "monochrome_logs": {
                     "type": "boolean",
                     "description": "Do not use coloured log outputs.",
@@ -182,32 +278,14 @@
                 },
                 "hook_url": {
                     "type": "string",
-                    "description": "Incoming hook URL for messaging service",
+                    "description": "Incoming hook URL for messaging service.",
                     "fa_icon": "fas fa-people-group",
                     "help_text": "Incoming hook URL for messaging service. Currently, MS Teams and Slack are supported.",
                     "hidden": true
                 },
-                "multiqc_config": {
-                    "type": "string",
-                    "format": "file-path",
-                    "description": "Custom config file to supply to MultiQC.",
-                    "fa_icon": "fas fa-cog",
-                    "hidden": true
-                },
-                "multiqc_logo": {
-                    "type": "string",
-                    "description": "Custom logo file to supply to MultiQC. File name must also be set in the MultiQC config file",
-                    "fa_icon": "fas fa-image",
-                    "hidden": true
-                },
-                "multiqc_methods_description": {
-                    "type": "string",
-                    "description": "Custom MultiQC yaml file containing HTML including a methods description.",
-                    "fa_icon": "fas fa-cog"
-                },
                 "validate_params": {
                     "type": "boolean",
-                    "description": "Boolean whether to validate parameters against the schema at runtime",
+                    "description": "Boolean whether to validate parameters against the schema at runtime.",
                     "default": true,
                     "fa_icon": "fas fa-check-square",
                     "hidden": true
@@ -215,7 +293,7 @@
                 "pipelines_testdata_base_path": {
                     "type": "string",
                     "fa_icon": "far fa-check-circle",
-                    "description": "Base URL or local path to location of pipeline test dataset files",
+                    "description": "Base URL or local path to location of pipeline test dataset files.",
                     "default": "https://raw.githubusercontent.com/nf-core/test-datasets/",
                     "hidden": true
                 },
@@ -243,6 +321,9 @@
     "allOf": [
         {
             "$ref": "#/$defs/input_output_options"
+        },
+        {
+            "$ref": "#/$defs/episegmix_options"
         },
         {
             "$ref": "#/$defs/reference_genome_options"

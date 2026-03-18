@@ -1,0 +1,1710 @@
+
+---
+events:
+  -
+
+---
+events:
+  -
+    kind: "message-v1"
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:205 (message)"
+    backtrace:
+      - "CMakeLists.txt:8 (project)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineSystem.cmake:205 (message)"
+    message: |
+      - "CMakeLists.txt:8 (project)"
+      The system is: Darwin - 25.3.0 - x86_64
+    message: |
+      The system is: Darwin - 25.3.0 - x86_64
+  -
+  -
+    kind: "message-v1"
+    kind: "message-v1"
+    backtrace:
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+      Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang 
+      Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+      Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+      Id flags:  
+      Id flags:  
+      
+      
+      The output was:
+      The output was:
+      0
+      0
+      
+      
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      
+      The C compiler identification is Clang, found in:
+      The C compiler identification is Clang, found in:
+        /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/4.0.2/CompilerIdC/a.out
+        /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/4.0.2/CompilerIdC/a.out
+      
+      
+  -
+  -
+    kind: "message-v1"
+    kind: "message-v1"
+    backtrace:
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+    message: |
+      Detecting C compiler apple sysroot: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang" "-march=core2" "-mtune=haswell" "-mssse3" "-ftree-vectorize" "-fPIC" "-fstack-protector-strong" "-O2" "-pipe" "-isystem" "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include" "-E" "apple-sdk.c"
+      Detecting C compiler apple sysroot: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang" "-march=core2" "-mtune=haswell" "-mssse3" "-ftree-vectorize" "-fPIC" "-fstack-protector-strong" "-O2" "-pipe" "-isystem" "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include" "-E" "apple-sdk.c"
+        # 1 "apple-sdk.c"
+        # 1 "apple-sdk.c"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 1 "<built-in>" 3
+        # 416 "<built-in>" 3
+        # 416 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.c" 2
+        # 1 "apple-sdk.c" 2
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 89 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 90 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 91 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 196 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 196 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 197 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 197 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 33 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 33 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 198 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 198 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 35 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 35 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 199 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 199 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 208 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.c" 2
+        # 2 "apple-sdk.c" 2
+        
+        
+        
+        
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+  -
+  -
+    kind: "message-v1"
+    kind: "message-v1"
+    backtrace:
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+      Compiler: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ 
+      Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+      Build flags: -march=core2;-mtune=haswell;-mssse3;-ftree-vectorize;-fPIC;-fstack-protector-strong;-O2;-pipe;-stdlib=libc++;-fvisibility-inlines-hidden;-fmessage-length=0;-isystem;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+      Id flags:  
+      Id flags:  
+      
+      
+      The output was:
+      The output was:
+      0
+      0
+      
+      
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      
+      The CXX compiler identification is Clang, found in:
+      The CXX compiler identification is Clang, found in:
+        /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/4.0.2/CompilerIdCXX/a.out
+        /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/4.0.2/CompilerIdCXX/a.out
+      
+      
+  -
+  -
+    kind: "message-v1"
+    kind: "message-v1"
+    backtrace:
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerId.cmake:290 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:8 (project)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+    message: |
+      Detecting CXX compiler apple sysroot: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++" "-march=core2" "-mtune=haswell" "-mssse3" "-ftree-vectorize" "-fPIC" "-fstack-protector-strong" "-O2" "-pipe" "-stdlib=libc++" "-fvisibility-inlines-hidden" "-fmessage-length=0" "-isystem" "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include" "-E" "apple-sdk.cpp"
+      Detecting CXX compiler apple sysroot: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++" "-march=core2" "-mtune=haswell" "-mssse3" "-ftree-vectorize" "-fPIC" "-fstack-protector-strong" "-O2" "-pipe" "-stdlib=libc++" "-fvisibility-inlines-hidden" "-fmessage-length=0" "-isystem" "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include" "-E" "apple-sdk.cpp"
+        # 1 "apple-sdk.cpp"
+        # 1 "apple-sdk.cpp"
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 1
+        # 1 "<built-in>" 3
+        # 1 "<built-in>" 3
+        # 479 "<built-in>" 3
+        # 479 "<built-in>" 3
+        # 1 "<command line>" 1
+        # 1 "<command line>" 1
+        # 1 "<built-in>" 2
+        # 1 "<built-in>" 2
+        # 1 "apple-sdk.cpp" 2
+        # 1 "apple-sdk.cpp" 2
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 1 3 4
+        # 89 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 89 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 90 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 90 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/TargetConditionals.h" 1 3 4
+        # 91 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 91 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 207 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 1 3 4
+        # 196 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 196 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 197 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 197 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 33 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 33 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityVersions.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 2 3 4
+        # 198 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 198 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 1 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 34 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 1 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternal.h" 1 3 4
+        # 35 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 35 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityInternalLegacy.h" 2 3 4
+        # 199 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 199 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h" 2 3 4
+        # 208 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 208 "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AvailabilityMacros.h" 2 3 4
+        # 2 "apple-sdk.cpp" 2
+        # 2 "apple-sdk.cpp" 2
+        
+        
+        
+        
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+      Found apple sysroot: /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-1DJheN"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-1DJheN"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-1DJheN'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7d3db/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7d3db.dir/build.make CMakeFiles/cmTC_7d3db.dir/build
+        Building C object CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        clang version 18.1.8
+        Target: x86_64-apple-darwin13.4.0
+        Thread model: posix
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+        x86_64-apple-darwin13.4: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         (in-process)
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/clang-18" -cc1 -triple x86_64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=26.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu core2 -target-feature +ssse3 -tune-cpu haswell -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-1DJheN -target-linker-version 711 -v -fcoverage-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-1DJheN -resource-dir /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18 -dependency-file CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-apple-darwin25.3.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+         /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        Linking C executable cmTC_7d3db
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d3db.dir/link.txt --verbose=1
+        clang version 18.1.8
+        Target: x86_64-apple-darwin13.4.0
+        Thread model: posix
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_7d3db -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:ld64-954.16
+        BUILD 06:06:26 Jul 18 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Library search paths:
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v -Wl,-v CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -o cmTC_7d3db
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-bGzhn1"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-bGzhn1"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-bGzhn1'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_64b5c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_64b5c.dir/build.make CMakeFiles/cmTC_64b5c.dir/build
+        Building C object CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        clang version 18.1.8
+        Target: x86_64-apple-darwin13.4.0
+        Thread model: posix
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+        x86_64-apple-darwin13.4: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         (in-process)
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/clang-18" -cc1 -triple x86_64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=26.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu core2 -target-feature +ssse3 -tune-cpu haswell -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-bGzhn1 -target-linker-version 711 -v -fcoverage-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-bGzhn1 -resource-dir /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18 -dependency-file CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c
+        clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-apple-darwin25.3.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+         /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        Linking C executable cmTC_64b5c
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64b5c.dir/link.txt --verbose=1
+        clang version 18.1.8
+        Target: x86_64-apple-darwin13.4.0
+        Thread model: posix
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_64b5c -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:ld64-954.16
+        BUILD 06:06:26 Jul 18 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Library search paths:
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v -Wl,-v CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -o cmTC_64b5c
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "x86_64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "x86_64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+          add: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        end of search list found
+        collapse include dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+        collapse include dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        implicit include dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+          add: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        end of search list found
+        collapse include dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+        collapse include dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        implicit include dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-1DJheN']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7d3db/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7d3db.dir/build.make CMakeFiles/cmTC_7d3db.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+        ignore line: [x86_64-apple-darwin13.4: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/clang-18" -cc1 -triple x86_64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=26.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu core2 -target-feature +ssse3 -tune-cpu haswell -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-1DJheN -target-linker-version 711 -v -fcoverage-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-1DJheN -resource-dir /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18 -dependency-file CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-apple-darwin25.3.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+        ignore line: [ /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_7d3db]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d3db.dir/link.txt --verbose=1]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+        link line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_7d3db -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [16.0.0] ==> ignore
+          arg [26.2] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_7d3db] ==> ignore
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        ignore line: [@(#)PROGRAM:ld  PROJECT:ld64-954.16]
+        ignore line: [BUILD 06:06:26 Jul 18 2025]
+        ignore line: [configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)]
+        ignore line: [Library search paths:]
+        ignore line: [	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        ignore line: [Framework search paths:]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v -Wl -v CMakeFiles/cmTC_7d3db.dir/CMakeCCompilerABI.c.o -o cmTC_7d3db]
+        ignore line: []
+        ignore line: []
+        Library search paths: [;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-bGzhn1']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_64b5c/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_64b5c.dir/build.make CMakeFiles/cmTC_64b5c.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+        ignore line: [x86_64-apple-darwin13.4: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/clang-18" -cc1 -triple x86_64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=26.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu core2 -target-feature +ssse3 -tune-cpu haswell -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-bGzhn1 -target-linker-version 711 -v -fcoverage-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-bGzhn1 -resource-dir /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18 -dependency-file CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o.d -MT CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -sys-header-deps -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -ferror-limit 19 -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -x c /opt/homebrew/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-apple-darwin25.3.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+        ignore line: [ /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking C executable cmTC_64b5c]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64b5c.dir/link.txt --verbose=1]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+        link line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_64b5c -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [16.0.0] ==> ignore
+          arg [26.2] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_64b5c] ==> ignore
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        ignore line: [@(#)PROGRAM:ld  PROJECT:ld64-954.16]
+        ignore line: [BUILD 06:06:26 Jul 18 2025]
+        ignore line: [configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)]
+        ignore line: [Library search paths:]
+        ignore line: [	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        ignore line: [Framework search paths:]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v -Wl -v CMakeFiles/cmTC_64b5c.dir/CMakeCCompilerABI.c.o -o cmTC_64b5c]
+        ignore line: []
+        ignore line: []
+        Library search paths: [;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-3KU6Wd"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-3KU6Wd"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-3KU6Wd'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_14db8/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_14db8.dir/build.make CMakeFiles/cmTC_14db8.dir/build
+        Building CXX object CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang version 18.1.8
+        Target: x86_64-apple-darwin13.4.0
+        Thread model: posix
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+        x86_64-apple-darwin13.4: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         (in-process)
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/clang-18" -cc1 -triple x86_64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=26.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu core2 -target-feature +ssse3 -tune-cpu haswell -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-3KU6Wd -target-linker-version 711 -v -fcoverage-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-3KU6Wd -resource-dir /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18 -dependency-file CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-apple-darwin25.3.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+         /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1
+         /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        Linking CXX executable cmTC_14db8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14db8.dir/link.txt --verbose=1
+        clang version 18.1.8
+        Target: x86_64-apple-darwin13.4.0
+        Thread model: posix
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_14db8 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:ld64-954.16
+        BUILD 06:06:26 Jul 18 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Library search paths:
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v -Wl,-v CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_14db8
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-42qXVQ"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-42qXVQ"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-42qXVQ'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8a0b4/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8a0b4.dir/build.make CMakeFiles/cmTC_8a0b4.dir/build
+        Building CXX object CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl,-v -MD -MT CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang version 18.1.8
+        Target: x86_64-apple-darwin13.4.0
+        Thread model: posix
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+        x86_64-apple-darwin13.4: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
+         (in-process)
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/clang-18" -cc1 -triple x86_64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=26.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu core2 -target-feature +ssse3 -tune-cpu haswell -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-42qXVQ -target-linker-version 711 -v -fcoverage-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-42qXVQ -resource-dir /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18 -dependency-file CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-apple-darwin25.3.0
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"
+        ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include
+         /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1
+         /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
+         /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
+        End of search list.
+        Linking CXX executable cmTC_8a0b4
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a0b4.dir/link.txt --verbose=1
+        clang version 18.1.8
+        Target: x86_64-apple-darwin13.4.0
+        Thread model: posix
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_8a0b4 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:ld64-954.16
+        BUILD 06:06:26 Jul 18 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Library search paths:
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v -Wl,-v CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8a0b4
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "x86_64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:122 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Effective list of requested architectures (possibly empty)  : ""
+      Effective list of architectures found in the ABI info binary: "x86_64"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+          add: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1]
+          add: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        end of search list found
+        collapse include dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+        collapse include dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include/c++/v1]
+        collapse include dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        implicit include dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include/c++/v1;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:191 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+          add: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1]
+          add: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+          add: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        end of search list found
+        collapse include dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+        collapse include dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include/c++/v1]
+        collapse include dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+        collapse include dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        implicit include dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include/c++/v1;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-3KU6Wd']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_14db8/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_14db8.dir/build.make CMakeFiles/cmTC_14db8.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+        ignore line: [x86_64-apple-darwin13.4: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/clang-18" -cc1 -triple x86_64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=26.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu core2 -target-feature +ssse3 -tune-cpu haswell -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-3KU6Wd -target-linker-version 711 -v -fcoverage-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-3KU6Wd -resource-dir /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18 -dependency-file CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-apple-darwin25.3.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+        ignore line: [ /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1]
+        ignore line: [ /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_14db8]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_14db8.dir/link.txt --verbose=1]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+        link line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_14db8 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [16.0.0] ==> ignore
+          arg [26.2] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_14db8] ==> ignore
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        ignore line: [@(#)PROGRAM:ld  PROJECT:ld64-954.16]
+        ignore line: [BUILD 06:06:26 Jul 18 2025]
+        ignore line: [configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)]
+        ignore line: [Library search paths:]
+        ignore line: [	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        ignore line: [Framework search paths:]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v -Wl -v CMakeFiles/cmTC_14db8.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_14db8]
+        ignore line: []
+        ignore line: []
+        Library search paths: [;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/CMakeDetermineCompilerABI.cmake:227 (message)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:8 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-42qXVQ']
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8a0b4/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8a0b4.dir/build.make CMakeFiles/cmTC_8a0b4.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk   -v -Wl -v -MD -MT CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+        ignore line: [x86_64-apple-darwin13.4: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
+        ignore line: [ (in-process)]
+        ignore line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/clang-18" -cc1 -triple x86_64-apple-macosx16.0.0 -Wundef-prefix=TARGET_OS_ -Werror=undef-prefix -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -pic-is-pie -mframe-pointer=all -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=26.2 -fcompatibility-qualified-id-block-type-checking -fvisibility-inlines-hidden-static-local-var -fbuiltin-headers-in-system-modules -fdefine-target-os-macros -target-cpu core2 -target-feature +ssse3 -tune-cpu haswell -debugger-tuning=lldb -fdebug-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-42qXVQ -target-linker-version 711 -v -fcoverage-compilation-dir=/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-42qXVQ -resource-dir /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18 -dependency-file CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o.d -MT CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -stdlib=libc++ -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1 -internal-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include -internal-externc-isystem /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -O2 -fdeprecated-macro -ferror-limit 19 -fvisibility-inlines-hidden -stack-protector 2 -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -vectorize-loops -vectorize-slp -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [clang -cc1 version 18.1.8 based upon LLVM 18.1.8 default target x86_64-apple-darwin25.3.0]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/local/include"]
+        ignore line: [ignoring nonexistent directory "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/Library/Frameworks"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include]
+        ignore line: [ /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/../include/c++/v1]
+        ignore line: [ /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include]
+        ignore line: [ /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
+        ignore line: [End of search list.]
+        ignore line: [Linking CXX executable cmTC_8a0b4]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8a0b4.dir/link.txt --verbose=1]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+        link line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_8a0b4 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [16.0.0] ==> ignore
+          arg [26.2] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_8a0b4] ==> ignore
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        ignore line: [@(#)PROGRAM:ld  PROJECT:ld64-954.16]
+        ignore line: [BUILD 06:06:26 Jul 18 2025]
+        ignore line: [configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)]
+        ignore line: [Library search paths:]
+        ignore line: [	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        ignore line: [Framework search paths:]
+        ignore line: [	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl -search_paths_first -Wl -headerpad_max_install_names -Wl -headerpad_max_install_names -Wl -dead_strip_dylibs -Wl -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v -Wl -v CMakeFiles/cmTC_8a0b4.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_8a0b4]
+        ignore line: []
+        ignore line: []
+        Library search paths: [;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: [c++]
+        implicit objs: []
+        implicit dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+  -
+    kind: "try_compile-v1"
+    kind: "try_compile-v1"
+    backtrace:
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/CheckCSourceCompiles.cmake:58 (cmake_check_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:97 (check_c_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:97 (check_c_source_compiles)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/opt/homebrew/share/cmake/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "/opt/homebrew/share/cmake/Modules/CMakeFindDependencyMacro.cmake:78 (find_package)"
+      - "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/cmake/boost_thread-1.85.0/boost_thread-config.cmake:118 (find_dependency)"
+      - "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/cmake/boost_thread-1.85.0/boost_thread-config.cmake:118 (find_dependency)"
+      - "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/cmake/Boost-1.85.0/BoostConfig.cmake:141 (find_package)"
+      - "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/cmake/Boost-1.85.0/BoostConfig.cmake:141 (find_package)"
+      - "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/cmake/Boost-1.85.0/BoostConfig.cmake:262 (boost_find_component)"
+      - "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/cmake/Boost-1.85.0/BoostConfig.cmake:262 (boost_find_component)"
+      - "/opt/homebrew/share/cmake/Modules/FindBoost.cmake:609 (find_package)"
+      - "/opt/homebrew/share/cmake/Modules/FindBoost.cmake:609 (find_package)"
+      - "CMakeLists.txt:70 (find_package)"
+      - "CMakeLists.txt:70 (find_package)"
+    directories:
+    directories:
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-k8DgC1"
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-yHPdrp"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-k8DgC1"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-yHPdrp"
+    cmakeVariables:
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include"
+      CMAKE_C_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      cached: true
+      stdout: |
+      stdout: |
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-k8DgC1'
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-yHPdrp'
+        
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_12cea/fast
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5559e/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_12cea.dir/build.make CMakeFiles/cmTC_12cea.dir/build
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5559e.dir/build.make CMakeFiles/cmTC_5559e.dir/build
+        Building C object CMakeFiles/cmTC_12cea.dir/src.c.o
+        Building C object CMakeFiles/cmTC_5559e.dir/src.c.o
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -DCMAKE_HAVE_LIBC_PTHREAD  -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_12cea.dir/src.c.o -MF CMakeFiles/cmTC_12cea.dir/src.c.o.d -o CMakeFiles/cmTC_12cea.dir/src.c.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-k8DgC1/src.c
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -DCMAKE_HAVE_LIBC_PTHREAD  -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_5559e.dir/src.c.o -MF CMakeFiles/cmTC_5559e.dir/src.c.o.d -o CMakeFiles/cmTC_5559e.dir/src.c.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-yHPdrp/src.c
+        Linking C executable cmTC_5559e
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5559e.dir/link.txt --verbose=1
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib  CMakeFiles/cmTC_5559e.dir/src.c.o -o cmTC_5559e
+        
+      exitCode: 0
+        Linking C executable cmTC_12cea
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12cea.dir/link.txt --verbose=1
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include  -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib  CMakeFiles/cmTC_12cea.dir/src.c.o -o cmTC_12cea
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+  -
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+    kind: "try_compile-v1"
+      - "CMakeLists.txt:93 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+    backtrace:
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-7sSLkU"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-7sSLkU"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+    cmakeVariables:
+      - "CMakeLists.txt:93 (find_package)"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+    description: "Detecting C OpenMP compiler info"
+      CMAKE_C_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include"
+    directories:
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-EDHaJe"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-EDHaJe"
+      CMAKE_MODULE_PATH: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/cmake/modules"
+    cmakeVariables:
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_C_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include"
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+    buildResult:
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      variable: "OpenMP_COMPILE_RESULT_C_fopenmplibomp"
+      CMAKE_MODULE_PATH: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/cmake/modules"
+      cached: true
+      CMAKE_OSX_ARCHITECTURES: ""
+      stdout: |
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-7sSLkU'
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+        
+    buildResult:
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_90d75/fast
+      variable: "OpenMP_COMPILE_RESULT_C_fopenmplibomp"
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_90d75.dir/build.make CMakeFiles/cmTC_90d75.dir/build
+      cached: true
+        Building C object CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o
+      stdout: |
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-EDHaJe'
+        
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-7sSLkU/OpenMPTryFlag.c
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_45707/fast
+        Linking C executable cmTC_90d75
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_45707.dir/build.make CMakeFiles/cmTC_45707.dir/build
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90d75.dir/link.txt --verbose=1
+        Building C object CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o
+        clang version 18.1.8
+        Target: x86_64-apple-darwin13.4.0
+        Thread model: posix
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-EDHaJe/OpenMPTryFlag.c
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+        Linking C executable cmTC_45707
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45707.dir/link.txt --verbose=1
+        clang version 18.1.8
+        Target: x86_64-apple-darwin13.4.0
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_90d75 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o -lomp -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        Thread model: posix
+        @(#)PROGRAM:ld  PROJECT:ld64-954.16
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+        BUILD 06:06:26 Jul 18 2025
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Library search paths:
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_45707 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o -lomp -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        @(#)PROGRAM:ld  PROJECT:ld64-954.16
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        BUILD 06:06:26 Jul 18 2025
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        Framework search paths:
+        Library search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib  -v -Wl,-v CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o -o cmTC_90d75
+        Framework search paths:
+        
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+      exitCode: 0
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib  -v -Wl,-v CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o -o cmTC_45707
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:294 (message)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:93 (find_package)"
+  -
+    message: |
+    kind: "message-v1"
+      Parsed C OpenMP implicit link information from above output:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+    backtrace:
+        ignore line: [Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-EDHaJe']
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:294 (message)"
+        ignore line: []
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_45707/fast]
+      - "CMakeLists.txt:93 (find_package)"
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_45707.dir/build.make CMakeFiles/cmTC_45707.dir/build]
+    message: |
+        ignore line: [Building C object CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o]
+      Parsed C OpenMP implicit link information from above output:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-EDHaJe/OpenMPTryFlag.c]
+        ignore line: [Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-7sSLkU']
+        ignore line: [Linking C executable cmTC_45707]
+        ignore line: []
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45707.dir/link.txt --verbose=1]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_90d75/fast]
+        ignore line: [clang version 18.1.8]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_90d75.dir/build.make CMakeFiles/cmTC_90d75.dir/build]
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+        ignore line: [Building C object CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-7sSLkU/OpenMPTryFlag.c]
+        ignore line: [Linking C executable cmTC_90d75]
+        link line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_45707 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o -lomp -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_90d75.dir/link.txt --verbose=1]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld] ==> ignore
+        ignore line: [clang version 18.1.8]
+          arg [-demangle] ==> ignore
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+          arg [-lto_library] ==> ignore, skip following value
+        ignore line: [Thread model: posix]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [-platform_version] ==> ignore
+        link line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_90d75 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o -lomp -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [macos] ==> ignore
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld] ==> ignore
+          arg [16.0.0] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [26.2] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [-syslibroot] ==> ignore
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-dynamic] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-arch] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [-o] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [cmTC_45707] ==> ignore
+          arg [macos] ==> ignore
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [16.0.0] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [26.2] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> ignore
+          arg [-o] ==> ignore
+          arg [-v] ==> ignore
+          arg [cmTC_90d75] ==> ignore
+          arg [CMakeFiles/cmTC_45707.dir/OpenMPTryFlag.c.o] ==> ignore
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-lomp] ==> lib [omp]
+          arg [-search_paths_first] ==> ignore
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-lSystem] ==> lib [System]
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [-rpath] ==> ignore
+        Library search paths: [;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> ignore
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+          arg [-v] ==> ignore
+        remove lib [System]
+          arg [CMakeFiles/cmTC_90d75.dir/OpenMPTryFlag.c.o] ==> ignore
+        remove lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [-lomp] ==> lib [omp]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-lSystem] ==> lib [System]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        Library search paths: [;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        remove lib [System]
+        implicit libs: [omp]
+        remove lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        implicit objs: []
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        implicit dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+      
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+      
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: [omp]
+        implicit objs: []
+        implicit dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+  -
+    kind: "try_compile-v1"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "CMakeLists.txt:93 (find_package)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+    description: "Detecting CXX OpenMP compiler info"
+      - "CMakeLists.txt:93 (find_package)"
+    directories:
+    description: "Detecting CXX OpenMP compiler info"
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZTCO1f"
+    directories:
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZTCO1f"
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZlYeti"
+    cmakeVariables:
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZlYeti"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++"
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS_DEBUG: "-g "
+      CMAKE_CXX_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_CXX_FLAGS_DEBUG: "-g "
+      CMAKE_MODULE_PATH: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/cmake/modules"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_MODULE_PATH: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/cmake/modules"
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+    buildResult:
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+      variable: "OpenMP_COMPILE_RESULT_CXX_fopenmplibomp"
+    buildResult:
+      cached: true
+      variable: "OpenMP_COMPILE_RESULT_CXX_fopenmplibomp"
+      stdout: |
+      cached: true
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZTCO1f'
+      stdout: |
+        
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZlYeti'
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_76975/fast
+        
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_76975.dir/build.make CMakeFiles/cmTC_76975.dir/build
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6e6e5/fast
+        Building CXX object CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6e6e5.dir/build.make CMakeFiles/cmTC_6e6e5.dir/build
+        Building CXX object CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++ -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZTCO1f/OpenMPTryFlag.cpp
+        Linking CXX executable cmTC_76975
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++ -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZlYeti/OpenMPTryFlag.cpp
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76975.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_6e6e5
+        clang version 18.1.8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e6e5.dir/link.txt --verbose=1
+        Target: x86_64-apple-darwin13.4.0
+        clang version 18.1.8
+        Thread model: posix
+        Target: x86_64-apple-darwin13.4.0
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+        Thread model: posix
+        InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_76975 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o -lomp -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -lc++ -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        @(#)PROGRAM:ld  PROJECT:ld64-954.16
+         "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_6e6e5 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o -lomp -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -lc++ -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a
+        BUILD 06:06:26 Jul 18 2025
+        @(#)PROGRAM:ld  PROJECT:ld64-954.16
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        BUILD 06:06:26 Jul 18 2025
+        Library search paths:
+        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        Library search paths:
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        	/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        Framework search paths:
+        	/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++ -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib  -v -Wl,-v CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o -o cmTC_76975
+        
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++ -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib  -v -Wl,-v CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o -o cmTC_6e6e5
+      exitCode: 0
+        
+      exitCode: 0
+  -
+  -
+    kind: "message-v1"
+    kind: "message-v1"
+    backtrace:
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:294 (message)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:294 (message)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:93 (find_package)"
+      - "CMakeLists.txt:93 (find_package)"
+    message: |
+    message: |
+      Parsed CXX OpenMP implicit link information from above output:
+      Parsed CXX OpenMP implicit link information from above output:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZTCO1f']
+        ignore line: [Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZlYeti']
+        ignore line: []
+        ignore line: []
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_76975/fast]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6e6e5/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_76975.dir/build.make CMakeFiles/cmTC_76975.dir/build]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6e6e5.dir/build.make CMakeFiles/cmTC_6e6e5.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o]
+        ignore line: [Building CXX object CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++ -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZTCO1f/OpenMPTryFlag.cpp]
+        ignore line: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++ -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-ZlYeti/OpenMPTryFlag.cpp]
+        ignore line: [Linking CXX executable cmTC_76975]
+        ignore line: [Linking CXX executable cmTC_6e6e5]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_76975.dir/link.txt --verbose=1]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e6e5.dir/link.txt --verbose=1]
+        ignore line: [clang version 18.1.8]
+        ignore line: [clang version 18.1.8]
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+        ignore line: [Target: x86_64-apple-darwin13.4.0]
+        ignore line: [Thread model: posix]
+        ignore line: [Thread model: posix]
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+        ignore line: [InstalledDir: /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin]
+        link line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_76975 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o -lomp -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -lc++ -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld" -demangle -lto_library /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib -dynamic -arch x86_64 -platform_version macos 16.0.0 26.2 -syslibroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_6e6e5 -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -search_paths_first -headerpad_max_install_names -headerpad_max_install_names -dead_strip_dylibs -rpath /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -v CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o -lomp -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -lc++ -lSystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld] ==> ignore
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-ld] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-demangle] ==> ignore
+          arg [-lto_library] ==> ignore, skip following value
+          arg [-lto_library] ==> ignore, skip following value
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/libLTO.18.1.dylib] ==> skip value of -lto_library
+          arg [-dynamic] ==> ignore
+          arg [-dynamic] ==> ignore
+          arg [-arch] ==> ignore
+          arg [-arch] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [x86_64] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [-platform_version] ==> ignore
+          arg [macos] ==> ignore
+          arg [macos] ==> ignore
+          arg [16.0.0] ==> ignore
+          arg [16.0.0] ==> ignore
+          arg [26.2] ==> ignore
+          arg [26.2] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [-syslibroot] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-mllvm] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-enable-linkonceodr-outlining] ==> ignore
+          arg [-o] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_76975] ==> ignore
+          arg [cmTC_6e6e5] ==> ignore
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-search_paths_first] ==> ignore
+          arg [-search_paths_first] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-headerpad_max_install_names] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [-dead_strip_dylibs] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [-rpath] ==> ignore
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> ignore
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> ignore
+          arg [-v] ==> ignore
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_76975.dir/OpenMPTryFlag.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_6e6e5.dir/OpenMPTryFlag.cpp.o] ==> ignore
+          arg [-lomp] ==> lib [omp]
+          arg [-lomp] ==> lib [omp]
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+          arg [-lc++] ==> lib [c++]
+          arg [-lc++] ==> lib [c++]
+          arg [-lSystem] ==> lib [System]
+          arg [-lSystem] ==> lib [System]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+          arg [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a] ==> lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        Library search paths: [;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Library search paths: [;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        Framework search paths: [;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/]
+        remove lib [System]
+        remove lib [System]
+        remove lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        remove lib [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib/clang/18/lib/darwin/libclang_rt.osx.a]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib] ==> [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse library dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        collapse framework dir [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/] ==> [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit libs: [omp;c++]
+        implicit libs: [omp;c++]
+        implicit objs: []
+        implicit objs: []
+        implicit dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit dirs: [/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib;/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+        implicit fwks: [/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks]
+      
+      
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:93 (find_package)"
+    description: "Detecting C OpenMP version"
+    directories:
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-V59x5Z"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-V59x5Z"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_MODULE_PATH: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/cmake/modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "OpenMP_SPECTEST_C_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-V59x5Z'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_88ce5/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_88ce5.dir/build.make CMakeFiles/cmTC_88ce5.dir/build
+        Building C object CMakeFiles/cmTC_88ce5.dir/OpenMPCheckVersion.c.o
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_88ce5.dir/OpenMPCheckVersion.c.o -MF CMakeFiles/cmTC_88ce5.dir/OpenMPCheckVersion.c.o.d -o CMakeFiles/cmTC_88ce5.dir/OpenMPCheckVersion.c.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-V59x5Z/OpenMPCheckVersion.c
+        Linking C executable cmTC_88ce5
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88ce5.dir/link.txt --verbose=1
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib  CMakeFiles/cmTC_88ce5.dir/OpenMPCheckVersion.c.o -o cmTC_88ce5
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:93 (find_package)"
+    description: "Detecting C OpenMP version"
+    directories:
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-Ommr3O"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-Ommr3O"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_C_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_MODULE_PATH: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/cmake/modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "OpenMP_SPECTEST_C_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-Ommr3O'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_93d6f/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_93d6f.dir/build.make CMakeFiles/cmTC_93d6f.dir/build
+        Building C object CMakeFiles/cmTC_93d6f.dir/OpenMPCheckVersion.c.o
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_93d6f.dir/OpenMPCheckVersion.c.o -MF CMakeFiles/cmTC_93d6f.dir/OpenMPCheckVersion.c.o.d -o CMakeFiles/cmTC_93d6f.dir/OpenMPCheckVersion.c.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-Ommr3O/OpenMPCheckVersion.c
+        Linking C executable cmTC_93d6f
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93d6f.dir/link.txt --verbose=1
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib  CMakeFiles/cmTC_93d6f.dir/OpenMPCheckVersion.c.o -o cmTC_93d6f
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:93 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-yPPvin"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-yPPvin"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++"
+      CMAKE_CXX_FLAGS_DEBUG: "-g "
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_MODULE_PATH: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/cmake/modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-yPPvin'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b417a/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b417a.dir/build.make CMakeFiles/cmTC_b417a.dir/build
+        Building CXX object CMakeFiles/cmTC_b417a.dir/OpenMPCheckVersion.cpp.o
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++ -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_b417a.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_b417a.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_b417a.dir/OpenMPCheckVersion.cpp.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-yPPvin/OpenMPCheckVersion.cpp
+        Linking CXX executable cmTC_b417a
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b417a.dir/link.txt --verbose=1
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++ -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib  CMakeFiles/cmTC_b417a.dir/OpenMPCheckVersion.cpp.o -o cmTC_b417a
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:491 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:631 (_OPENMP_GET_SPEC_DATE)"
+      - "CMakeLists.txt:93 (find_package)"
+    description: "Detecting CXX OpenMP version"
+    directories:
+      source: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-FwnGp0"
+      binary: "/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-FwnGp0"
+    cmakeVariables:
+      CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS: "CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-NOTFOUND"
+      CMAKE_CXX_FLAGS: "-march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++"
+      CMAKE_CXX_FLAGS_DEBUG: "-g "
+      CMAKE_EXE_LINKER_FLAGS: "-Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib"
+      CMAKE_MODULE_PATH: "/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/cmake/modules"
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk"
+    buildResult:
+      variable: "OpenMP_SPECTEST_CXX_"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-FwnGp0'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b87b8/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b87b8.dir/build.make CMakeFiles/cmTC_b87b8.dir/build
+        Building CXX object CMakeFiles/cmTC_b87b8.dir/OpenMPCheckVersion.cpp.o
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++   -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++ -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -MD -MT CMakeFiles/cmTC_b87b8.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_b87b8.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_b87b8.dir/OpenMPCheckVersion.cpp.o -c /Users/aaryanjaitly/Desktop/final/episegmix/bin/HMM/build/CMakeFiles/CMakeScratch/TryCompile-FwnGp0/OpenMPCheckVersion.cpp
+        Linking CXX executable cmTC_b87b8
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b87b8.dir/link.txt --verbose=1
+        /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/bin/x86_64-apple-darwin13.4.0-clang++ -march=core2 -mtune=haswell -mssse3 -ftree-vectorize -fPIC -fstack-protector-strong -O2 -pipe -stdlib=libc++ -fvisibility-inlines-hidden -fmessage-length=0 -isystem /Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/include -std=c++17 -stdlib=libc++ -fopenmp=libomp -arch x86_64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names -Wl,-headerpad_max_install_names -Wl,-dead_strip_dylibs -Wl,-rpath,/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib -L/Users/aaryanjaitly/nextflow_conda_envs/env-dfc37b1c4e790d0cc8e9b7dcc711982e/lib  CMakeFiles/cmTC_b87b8.dir/OpenMPCheckVersion.cpp.o -o cmTC_b87b8
+        
+      exitCode: 0
+...
+...
