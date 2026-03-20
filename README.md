@@ -23,7 +23,7 @@
 
 **nf-core/episegmix** is a bioinformatics pipeline for chromatin segmentation. It uses a hidden Markov model (HMM) to annotate genomic regions with functional states (e.g., enhancers, promoters) based on combinations of epigenetic modifications, capturing spatial relations via transition probabilities.
 
-![nf-core/episegmix metro map](docs/images/nf-core-episegmix.svg)
+![nf-core/episegmix metro map](docs/images/nf-core-episegmix_dark.svg)
 
 
 ## Default Workflow: Standard Mode
