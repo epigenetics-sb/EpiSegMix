@@ -12,7 +12,7 @@ workflow PROCESS_METHYL {
     GENERATE_COUNT_MATRIX_BED(
         ch_input_bed
     )
-    ch_versions = ch_versions.mix(GENERATE_COUNT_MATRIX_BED.out.versions.first())
+    ch_versions = ch_versions.mix(GENERATE_COUNT_MATRIX_BED.out.versions)
 
     emit:
     counts   = GENERATE_COUNT_MATRIX_BED.out.counts_bed

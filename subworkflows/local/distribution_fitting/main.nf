@@ -27,7 +27,7 @@ workflow DISTRIBUTION_FITTING {
 
     // Call Training module
     EPISEGMIX_DISTFIT_HISTONE_TRAIN(ch_histone_inputs)
-    ch_versions = ch_versions.mix(EPISEGMIX_DISTFIT_HISTONE_TRAIN.out.versions.first())
+    ch_versions = ch_versions.mix(EPISEGMIX_DISTFIT_HISTONE_TRAIN.out.versions)
 
     // Prepare assess input
     ch_h_assess_input = ch_histone_data
@@ -37,7 +37,7 @@ workflow DISTRIBUTION_FITTING {
         
     // Call Assess process
     EPISEGMIX_DISTFIT_HISTONE_ASSESS(ch_h_assess_input, original_samplesheet)
-    ch_versions = ch_versions.mix(EPISEGMIX_DISTFIT_HISTONE_ASSESS.out.versions.first())
+    ch_versions = ch_versions.mix(EPISEGMIX_DISTFIT_HISTONE_ASSESS.out.versions)
 
     // Combine individual sample CSVs into one final master samplesheet
     EPISEGMIX_DISTFIT_HISTONE_ASSESS.out.updated_samplesheet

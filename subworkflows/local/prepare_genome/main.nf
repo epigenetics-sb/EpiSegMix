@@ -9,7 +9,7 @@ workflow PREPARE_GENOME {
     GET_GENOME_CHROM_SIZE(
         params.genome
     )
-    ch_versions = ch_versions.mix(GET_GENOME_CHROM_SIZE.out.versions.first())
+    ch_versions = ch_versions.mix(GET_GENOME_CHROM_SIZE.out.versions)
 
     // Create fixed-size genomic windows from chromosome sizes
     GENERATE_GENOME_BINS(
@@ -17,7 +17,7 @@ workflow PREPARE_GENOME {
         params.genome,
         params.binsize
     )
-    ch_versions = ch_versions.mix(GENERATE_GENOME_BINS.out.versions.first())
+    ch_versions = ch_versions.mix(GENERATE_GENOME_BINS.out.versions)
 
     emit:
     chrom_sizes = GET_GENOME_CHROM_SIZE.out.genome_chrom_size_file

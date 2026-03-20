@@ -27,7 +27,7 @@ workflow MODEL_TRAINING_STD {
         ch_std_prepare_in,    
         params.chr_parameter_estimation   
     )
-    ch_versions = ch_versions.mix(EPISEGMIX_STD_PREPARE.out.versions.first())
+    ch_versions = ch_versions.mix(EPISEGMIX_STD_PREPARE.out.versions)
 
     // Assemble components for the training phase
     ch_train_inputs = EPISEGMIX_STD_PREPARE.out.config
@@ -37,7 +37,7 @@ workflow MODEL_TRAINING_STD {
 
     // Execute standard HMM model training
     EPISEGMIX_STD_TRAIN(ch_train_inputs)
-    ch_versions = ch_versions.mix(EPISEGMIX_STD_TRAIN.out.versions.first())
+    ch_versions = ch_versions.mix(EPISEGMIX_STD_TRAIN.out.versions)
 
     // Match model and config for Viterbi decoding
     ch_decode_inputs = EPISEGMIX_STD_PREPARE.out.config
@@ -45,7 +45,7 @@ workflow MODEL_TRAINING_STD {
 
     // Generate genome-wide state segmentations
     EPISEGMIX_STD_DECODE(ch_decode_inputs)
-    ch_versions = ch_versions.mix(EPISEGMIX_STD_DECODE.out.versions.first())
+    ch_versions = ch_versions.mix(EPISEGMIX_STD_DECODE.out.versions)
 
     // Group all data for downstream visualization
     ch_report_inputs = EPISEGMIX_STD_PREPARE.out.config
@@ -55,7 +55,7 @@ workflow MODEL_TRAINING_STD {
 
     // Create final analysis report and plots
     EPISEGMIX_STD_REPORT(ch_report_inputs)
-    ch_versions = ch_versions.mix(EPISEGMIX_STD_REPORT.out.versions.first())
+    ch_versions = ch_versions.mix(EPISEGMIX_STD_REPORT.out.versions)
 
     emit:
     versions = ch_versions

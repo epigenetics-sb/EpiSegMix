@@ -31,7 +31,7 @@ workflow GENERATE_BINS {
         ch_bins
     )
 
-    ch_versions = ch_versions.mix(GENERATE_METHYLATION_BINS.out.versions.first())
+    ch_versions = ch_versions.mix(GENERATE_METHYLATION_BINS.out.versions)
 
     emit:
     split_counts = GENERATE_METHYLATION_BINS.out.merged_counts

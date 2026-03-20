@@ -50,10 +50,15 @@ process GENERATE_COUNT_MATRIX_BAM {
     SE_OUT="${out_dir}/${sample_id}_SE_${genome}_refined_counts.txt"
     FINAL_OUT="${out_dir}/${sample_id}_${genome}_refined_counts.txt"
 
-    awk -v OFS="\t" '{print \$1, 1, \$2}' "${reference_file}" > new_reference
+    # Create a base reference file that won't be touched by the scripts
+    awk -v OFS="\t" '{print \$1, 1, \$2}' "${reference_file}" > new_reference_base
 
     if [[ -n "${pe_content}" ]]; then
         echo "${pe_content}" > "PE_info.txt"
+        
+        # Create a specific copy for the PE run
+        cp new_reference_base new_reference_pe
+        
         bash counts.sh \\
             -t "PE_info.txt" \\
             -o "${out_dir}" \\
@@ -61,12 +66,16 @@ process GENERATE_COUNT_MATRIX_BAM {
             -p midpoint \\
             -f "${sample_id}_PE" \\
             -g "${genome}" \\
-            -r ./new_reference \\
+            -r ./new_reference_pe \\
             -b ${params.binsize}
     fi
 
     if [[ -n "${se_content}" ]]; then
         echo "${se_content}" > "SE_info.txt"
+        
+        # Create a specific copy for the SE run
+        cp new_reference_base new_reference_se
+        
         bash counts.sh \\
             -t "SE_info.txt" \\
             -o "${out_dir}" \\
@@ -74,7 +83,7 @@ process GENERATE_COUNT_MATRIX_BAM {
             -p ignore \\
             -f "${sample_id}_SE" \\
             -g "${genome}" \\
-            -r ./new_reference \\
+            -r ./new_reference_se \\
             -b ${params.binsize}
     fi
 
@@ -93,7 +102,7 @@ process GENERATE_COUNT_MATRIX_BAM {
     "${task.process}":
         bash: \$(bash --version | head -n 1 | sed 's/.*version //g' | awk '{print \$1}')
         awk: \$(awk --version | head -n 1 | awk '{print \$3}')
-    END_VERSIONS
+END_VERSIONS
     """
 
     stub:
@@ -108,6 +117,6 @@ process GENERATE_COUNT_MATRIX_BAM {
     "${task.process}":
         bash: \$(bash --version | head -n 1 | sed 's/.*version //g' | awk '{print \$1}')
         awk: \$(awk --version | head -n 1 | awk '{print \$3}')
-    END_VERSIONS
+END_VERSIONS
     """
 }

@@ -14,7 +14,7 @@ workflow PROCESS_HISTONES {
     CLEAN_AND_INDEX_BAM(
         ch_input_bam
     )
-    ch_versions = ch_versions.mix(CLEAN_AND_INDEX_BAM.out.versions.first())
+    ch_versions = ch_versions.mix(CLEAN_AND_INDEX_BAM.out.versions)
 
     // Group processed BAMs into sample-specific tuples for matrix generation
     CLEAN_AND_INDEX_BAM.out.sanitized_bam
@@ -38,7 +38,7 @@ workflow PROCESS_HISTONES {
         chrom_sizes,
         params.genome
     )
-    ch_versions = ch_versions.mix(GENERATE_COUNT_MATRIX_BAM.out.versions.first())
+    ch_versions = ch_versions.mix(GENERATE_COUNT_MATRIX_BAM.out.versions)
     
     emit:
     counts   = GENERATE_COUNT_MATRIX_BAM.out.counts

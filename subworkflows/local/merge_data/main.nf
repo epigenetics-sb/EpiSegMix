@@ -40,13 +40,13 @@ workflow MERGE_DATA {
         ref_file,
         ch_bins
     )
-    ch_versions = ch_versions.mix(MERGE_COUNTS.out.versions.first())
+    ch_versions = ch_versions.mix(MERGE_COUNTS.out.versions)
 
     // Separate merged data into histone and methylation model inputs
     SPLIT_MERGED_COUNTS(
         MERGE_COUNTS.out.merged_counts
     )
-    ch_versions = ch_versions.mix(SPLIT_MERGED_COUNTS.out.versions.first())
+    ch_versions = ch_versions.mix(SPLIT_MERGED_COUNTS.out.versions)
 
     emit:
     split_counts = SPLIT_MERGED_COUNTS.out.inputs

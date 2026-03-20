@@ -27,14 +27,14 @@ workflow MODEL_TRAINING_DNA {
     }
 
     EPISEGMIX_DNA_PREPARE(ch_inputs_split)
-    ch_versions = ch_versions.mix(EPISEGMIX_DNA_PREPARE.out.versions.first())
+    ch_versions = ch_versions.mix(EPISEGMIX_DNA_PREPARE.out.versions)
 
     ch_train_inputs = EPISEGMIX_DNA_PREPARE.out.config
         .join(EPISEGMIX_DNA_PREPARE.out.train_counts)
         .join(EPISEGMIX_DNA_PREPARE.out.train_regions)
 
     EPISEGMIX_DNA_TRAIN(ch_train_inputs)
-    ch_versions = ch_versions.mix(EPISEGMIX_DNA_TRAIN.out.versions.first())
+    ch_versions = ch_versions.mix(EPISEGMIX_DNA_TRAIN.out.versions)
 
     ch_decode_inputs = EPISEGMIX_DNA_PREPARE.out.config
         .join(EPISEGMIX_DNA_TRAIN.out.model)
@@ -42,7 +42,7 @@ workflow MODEL_TRAINING_DNA {
         .join(EPISEGMIX_DNA_PREPARE.out.train_regions)
         
     EPISEGMIX_DNA_DECODE(ch_decode_inputs)
-    ch_versions = ch_versions.mix(EPISEGMIX_DNA_DECODE.out.versions.first())
+    ch_versions = ch_versions.mix(EPISEGMIX_DNA_DECODE.out.versions)
 
     ch_report_inputs = EPISEGMIX_DNA_PREPARE.out.config
         .join(EPISEGMIX_DNA_TRAIN.out.model)
@@ -50,7 +50,7 @@ workflow MODEL_TRAINING_DNA {
         .join(EPISEGMIX_DNA_DECODE.out.seg_txt)
 
     EPISEGMIX_DNA_REPORT(ch_report_inputs)
-    ch_versions = ch_versions.mix(EPISEGMIX_DNA_REPORT.out.versions.first())
+    ch_versions = ch_versions.mix(EPISEGMIX_DNA_REPORT.out.versions)
 
     emit:
     versions = ch_versions
