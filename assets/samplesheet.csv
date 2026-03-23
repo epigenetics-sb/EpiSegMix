@@ -1,3 +1,3 @@
 sample_id,replicate,epigenetic_mark,file_name,modality,paired_end,distribution
-TEST,1,H3K4me3,/Users/aaryanjaitly/Desktop/test-datasets/testdata/test_chip.bam,ChIP-seq,true,NBI
-TEST,1,WGBS,/Users/aaryanjaitly/Desktop/test-datasets/testdata/test_methyl.bed.gz,WGBS,true,BI
+TEST,1,H3K4me3,./assets/test-data/test_chip.bam,ChIP-seq,true,NBI
+TEST,1,WGBS,./assets/test-data/test_methyl.bed.gz,WGBS,true,BI

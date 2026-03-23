@@ -100,6 +100,37 @@ process MERGE_COUNTS {
         exit 1
     fi
 
+    # -----------------------------------------------------------------
+    # SORT COLUMNS ALPHABETICALLY TO ENSURE CONSISTENCY ACROSS SAMPLES
+    # -----------------------------------------------------------------
+    HEADER=\$(head -n 1 "\$FINAL_OUT")
+    
+    NUM_METRICS=0
+    if [[ "\$HAS_WGBS" == "true" ]]; then NUM_METRICS=\$((NUM_METRICS + 2)); fi
+    if [[ "\$HAS_NOME" == "true" ]]; then NUM_METRICS=\$((NUM_METRICS + 2)); fi
+    
+    # Generate sorted column variables for the histone columns (col 4 to NF - NUM_METRICS)
+    HIST_COLS=\$(echo "\$HEADER" | awk -F'\\t' -v m="\$NUM_METRICS" '{
+        for(i=4; i<=NF-m; i++) print i, \$i
+    }' | sort -k2,2 | awk '{printf "\$%s,", \$1}' | sed 's/,\$//')
+    
+    # Construct the print pattern: cols 1-3, sorted histones, fixed metrics
+    PRINT_COLS='\$1, \$2, \$3'
+    if [[ -n "\$HIST_COLS" ]]; then
+        PRINT_COLS="\$PRINT_COLS, \$HIST_COLS"
+    fi
+    if [[ \$NUM_METRICS -gt 0 ]]; then
+        METRIC_COLS=\$(echo "\$HEADER" | awk -F'\\t' -v m="\$NUM_METRICS" '{
+            for(i=NF-m+1; i<=NF; i++) printf "\$%s,", i
+        }' | sed 's/,\$//')
+        PRINT_COLS="\$PRINT_COLS, \$METRIC_COLS"
+    fi
+    
+    # Apply the sorted column order over the finalized bed
+    awk -F'\\t' -v OFS='\\t' '{print '"\$PRINT_COLS"'}' "\$FINAL_OUT" > temp_sorted.bed
+    mv temp_sorted.bed "\$FINAL_OUT"
+    # -----------------------------------------------------------------
+
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
         bedtools: \$(bedtools --version | sed -e "s/bedtools v//g")
@@ -117,6 +148,6 @@ process MERGE_COUNTS {
     "${task.process}":
         bedtools: \$(bedtools --version | sed -e "s/bedtools v//g")
         awk: \$(awk --version | head -n 1 | awk '{print \$3}')
-    END_VERSIONS
+END_VERSIONS
     """
 }

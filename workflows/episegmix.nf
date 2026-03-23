@@ -37,19 +37,26 @@ workflow EPISEGMIX {
     main:
     ch_versions      = ch_versions_init
     ch_multiqc_files = Channel.empty()
+    ch_counts        = Channel.empty()
 
     // ---------------------------------------------------------
-    // DETERMINE PIPELINE MODE
+    // DETERMINE PIPELINE BEHAVIOR FLAGS
     // ---------------------------------------------------------
-    // Prioritize specific flags over the legacy 'episegmix_mode' string
-    def active_mode = params.episegmix_mode
-    if (params.fitting)       { active_mode = 'fitting'  }
-    else if (params.duration) { active_mode = 'duration' }
-    else if (params.dna)      { active_mode = 'DNA'      }
-    else if (params.standard) { active_mode = 'standard' }
+    def is_dna      = params.dna || params.DNA
+    def is_counts   = params.counts
 
-    // Create a dictionary of distributions for each sample and mark
-    ch_distributions = ch_samplesheet
+    // ---------------------------------------------------------
+    // FORK SAMPLESHEET TO PREVENT CHANNEL CONSUMPTION HANGS
+    // ---------------------------------------------------------
+    ch_samplesheet.multiMap { meta, file ->
+        for_dists: [ meta, file ]
+        for_branching: [ meta, file ]
+    }.set { ch_forked_samplesheet }
+
+    // ---------------------------------------------------------
+    // INITIAL DISTRIBUTION MAP
+    // ---------------------------------------------------------
+    ch_distributions = ch_forked_samplesheet.for_dists
         .map { meta, file -> 
             def dist = meta.distribution ?: meta.distributions
             [ meta.id, meta.epigenetic_mark, dist ] 
@@ -60,12 +67,16 @@ workflow EPISEGMIX {
             return [ id, dist_map ]
         }
 
-    // Step 1: Generate genomic bins and chromosome sizes
+    // ---------------------------------------------------------
+    // STEP 1: PREPARE GENOME
+    // ---------------------------------------------------------
     PREPARE_GENOME()
     ch_versions = ch_versions.mix(PREPARE_GENOME.out.versions)
 
-    // Step 2: Split input files into BAM (Histones) and BED (Methylation)
-    ch_samplesheet
+    // ---------------------------------------------------------
+    // STEP 2: SPLIT INPUT
+    // ---------------------------------------------------------
+    ch_forked_samplesheet.for_branching
         .transpose() 
         .branch {
             meta, file ->
@@ -75,120 +86,151 @@ workflow EPISEGMIX {
                 other: true
         }.set { ch_input_branched }
 
-    // Step 3: Process Histone BAM files
-    if (active_mode != 'DNA') {
+    // ---------------------------------------------------------
+    // STEP 3: HISTONES (Skip if pure DNA mode)
+    // ---------------------------------------------------------
+    if (!is_dna) {
         PROCESS_HISTONES(ch_input_branched.bam, PREPARE_GENOME.out.chrom_sizes)
         ch_versions = ch_versions.mix(PROCESS_HISTONES.out.versions)
+        ch_counts   = ch_counts.mix(PROCESS_HISTONES.out.counts)
     }
     
-    // Step 4: Process Methylation BED files
-    if (active_mode == 'DNA' || params.merge) {
+    // ---------------------------------------------------------
+    // STEP 4: METHYLATION
+    // ---------------------------------------------------------
+    if (is_dna || params.merge) {
         PROCESS_METHYL(ch_input_branched.bed)
         ch_versions = ch_versions.mix(PROCESS_METHYL.out.versions)
+        ch_counts   = ch_counts.mix(PROCESS_METHYL.out.counts)
     }
 
-    // Step 5: Formatting and Merging Logic
-    ch_model_input = Channel.empty()
+    // ---------------------------------------------------------
+    // CONDITIONAL EXECUTION (SKIPPED IN 'COUNTS' MODE)
+    // ---------------------------------------------------------
+    if (!is_counts) {
 
-    if (active_mode == 'DNA') {
-        GENERATE_BINS(PROCESS_METHYL.out.counts, PREPARE_GENOME.out.bins)
-        ch_model_input = GENERATE_BINS.out.split_counts
-        ch_versions    = ch_versions.mix(GENERATE_BINS.out.versions)
+        // ---------------------------------------------------------
+        // STEP 5: MERGING / BINNING
+        // ---------------------------------------------------------
+        ch_model_input = Channel.empty()
 
-    } else if (params.merge) {
-        MERGE_DATA(PROCESS_HISTONES.out.counts, PROCESS_METHYL.out.counts, PREPARE_GENOME.out.bins, PREPARE_GENOME.out.chrom_sizes)
-        ch_model_input = MERGE_DATA.out.split_counts
-        ch_versions    = ch_versions.mix(MERGE_DATA.out.versions)
+        if (is_dna) {
+            GENERATE_BINS(PROCESS_METHYL.out.counts, PREPARE_GENOME.out.bins)
+            ch_model_input = GENERATE_BINS.out.split_counts
+            ch_versions    = ch_versions.mix(GENERATE_BINS.out.versions)
 
-    } else {
-        ch_model_input = PROCESS_HISTONES.out.counts.map { meta, counts_file -> [ meta, counts_file, [] ] }
-    }
+        } else if (params.merge) {
+            MERGE_DATA(
+                PROCESS_HISTONES.out.counts,
+                PROCESS_METHYL.out.counts,
+                PREPARE_GENOME.out.bins,
+                PREPARE_GENOME.out.chrom_sizes
+            )
+            ch_model_input = MERGE_DATA.out.split_counts
+            ch_versions    = ch_versions.mix(MERGE_DATA.out.versions)
 
-    // Step 6: Metadata Injection
-    ch_ready_for_analysis = ch_model_input
-        .map { tuple -> [ tuple[0].id, tuple ] } 
-        .join(ch_distributions)                  
-        .map { id, original_tuple, dist_map ->
-            def new_meta = original_tuple[0].clone()
-            new_meta.distributions = dist_map    
-            return [ new_meta ] + original_tuple.drop(1) 
+        } else {
+            ch_model_input = PROCESS_HISTONES.out.counts
+                .map { meta, counts_file -> [ meta, counts_file, [] ] }
         }
 
-    // Step 7: Route to Analysis Models
-    if (active_mode == 'fitting') {
-        def dist_list = params.distributions ? params.distributions.split(',').collect{ it.trim() } : []
-        DISTRIBUTION_FITTING(ch_ready_for_analysis.map { [it[0], it[1]] }, dist_list, file(params.input))
-        ch_versions = ch_versions.mix(DISTRIBUTION_FITTING.out.versions)
+        // ---------------------------------------------------------
+        // STEP 6: INITIAL METADATA INJECTION
+        // ---------------------------------------------------------
+        ch_ready_for_analysis = ch_model_input
+            .map { tuple -> [ tuple[0].id, tuple ] } 
+            .join(ch_distributions)                  
+            .map { id, original_tuple, dist_map ->
+                def new_meta = original_tuple[0] + [ distributions: dist_map ]    
+                return [ new_meta ] + original_tuple.drop(1) 
+            }
 
-        if (params.best_fit_segmentation) {
-            ch_updated_dist = DISTRIBUTION_FITTING.out.updated_samplesheet
-                .splitCsv(header: true)
-                .map { meta, row -> 
-                    [ meta.id, row.epigenetic_mark, row.distribution ] 
-                }
-                .groupTuple(by: 0)
-                .map { id, marks, dists ->
-                    def dist_map = [marks, dists].transpose().collectEntries { k, v -> [k, v] }
-                    return [ id, dist_map ]
-                }
+        // ---------------------------------------------------------
+        // STEP 7: SEQUENTIAL MODEL ROUTING
+        // ---------------------------------------------------------
+        // Default to the base analysis input
+        def ch_final_training_input = ch_ready_for_analysis
 
-            ch_best_fit_model_input = ch_ready_for_analysis
-                .map { tuple -> [ tuple[0].id, tuple ] } 
-                .join(ch_updated_dist)                  
-                .map { id, original_tuple, dist_map ->
-                    def new_meta = original_tuple[0].clone()
-                    new_meta.distributions = dist_map    
-                    return [ new_meta ] + original_tuple.drop(1) 
-                }
+        // PHASE A: FITTING
+        if (params.fitting) {
+            def dist_list = params.distributions ? params.distributions.split(',').collect{ it.trim() } : []
+            
+            DISTRIBUTION_FITTING(
+                ch_ready_for_analysis.map { [it[0], it[1]] },
+                dist_list,
+                Channel.fromPath(params.input).first() 
+            )
+            ch_versions = ch_versions.mix(DISTRIBUTION_FITTING.out.versions)
 
+            // CHAINING LOGIC: If segmentation is requested, parse the new CSV and update the input
+            if (params.best_fit_segmentation) {
+                
+                // Parse the new distributions from the CSV output
+                ch_updated_dist = DISTRIBUTION_FITTING.out.updated_samplesheet
+                    .splitCsv(header: true)
+                    .map { meta, row -> [ meta.id, row.epigenetic_mark, row.distribution ] }
+                    .groupTuple(by: 0)
+                    .map { id, marks, dists ->
+                        def dist_map = [marks, dists].transpose().collectEntries { k, v -> [k, v] }
+                        return [ id, dist_map ]
+                    }
+
+                // Inject the updated distributions back into the main data channel
+                ch_final_training_input = ch_ready_for_analysis
+                    .map { tuple -> [ tuple[0].id, tuple ] } 
+                    .join(ch_updated_dist)                  
+                    .map { id, original_tuple, dist_map ->
+                        def new_meta = original_tuple[0] + [ distributions: dist_map ]    
+                        return [ new_meta ] + original_tuple.drop(1) 
+                    }
+            }
+        }
+
+        // PHASE B: SEGMENTATION / DURATION / STANDARD TRAINING
+        // Runs if it's a standard run, OR if it's a fitting run that explicitly requested downstream segmentation
+        if (!params.fitting || params.best_fit_segmentation) {
+            
             if (params.duration) {
-                MODEL_TRAINING_DM(ch_best_fit_model_input)
+                MODEL_TRAINING_DM(ch_final_training_input)
                 ch_versions = ch_versions.mix(MODEL_TRAINING_DM.out.versions)
+
+            } else if (is_dna) {
+                ch_dna_model_input = ch_final_training_input.map { [ it[0], it[1], it.size() > 2 ? it[2] : params.states ] }
+                MODEL_TRAINING_DNA(ch_dna_model_input)
+                ch_versions = ch_versions.mix(MODEL_TRAINING_DNA.out.versions)
+
             } else {
-                MODEL_TRAINING_STD(ch_best_fit_model_input)
+                MODEL_TRAINING_STD(ch_final_training_input)
                 ch_versions = ch_versions.mix(MODEL_TRAINING_STD.out.versions)
             }
         }
 
-    } else if (active_mode == 'duration') {
-        MODEL_TRAINING_DM(ch_ready_for_analysis)
-        ch_versions = ch_versions.mix(MODEL_TRAINING_DM.out.versions)
+        // ---------------------------------------------------------
+        // MULTIQC & VERSION COLLATE
+        // ---------------------------------------------------------
+        softwareVersionsToYAML(ch_versions)
+            .collectFile(
+                storeDir: "${params.outdir}/pipeline_info",
+                name: 'nf_core_episegmix_software_mqc_versions.yml',
+                sort: true,
+                newLine: true
+            ).set { ch_collated_versions }
 
-    } else if (active_mode == 'DNA') {
-        ch_dna_model_input = ch_ready_for_analysis.map { [ it[0], it[1], it.size() > 2 ? it[2] : params.states ] }
-        MODEL_TRAINING_DNA(ch_dna_model_input)
-        ch_versions = ch_versions.mix(MODEL_TRAINING_DNA.out.versions)
+        summary_params      = paramsSummaryMap(workflow, parameters_schema: "nextflow_schema.json")
+        ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
+        
+        ch_multiqc_files = ch_multiqc_files.mix(
+            ch_workflow_summary.collectFile(name: 'workflow_summary_mqc.yaml')
+        )
+        ch_multiqc_files = ch_multiqc_files.mix(ch_collated_versions)
 
-    } else {
-        MODEL_TRAINING_STD(ch_ready_for_analysis)
-        ch_versions = ch_versions.mix(MODEL_TRAINING_STD.out.versions)
+        MULTIQC (
+            ch_multiqc_files.collect(),
+            [], [], [], [], []
+        )
     }
-
-    // ---------------------------------------------------------
-    // MULTIQC & VERSION COLLATE
-    // ---------------------------------------------------------
-
-    // Collate Software Versions
-    softwareVersionsToYAML(ch_versions)
-        .collectFile(
-            storeDir: "${params.outdir}/pipeline_info",
-            name: 'nf_core_episegmix_software_mqc_versions.yml',
-            sort: true,
-            newLine: true
-        ).set { ch_collated_versions }
-
-    // MODULE: MultiQC
-    summary_params      = paramsSummaryMap(workflow, parameters_schema: "nextflow_schema.json")
-    ch_workflow_summary = Channel.value(paramsSummaryMultiqc(summary_params))
-    
-    ch_multiqc_files = ch_multiqc_files.mix(ch_workflow_summary.collectFile(name: 'workflow_summary_mqc.yaml'))
-    ch_multiqc_files = ch_multiqc_files.mix(ch_collated_versions)
-
-    MULTIQC (
-        ch_multiqc_files.collect(),
-        [], [], [], [], []
-    )
 
     emit:
     versions = ch_versions 
+    counts   = ch_counts
 }
