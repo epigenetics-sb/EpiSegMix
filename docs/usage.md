@@ -38,7 +38,10 @@ SAMPLE_A,1,WGBS,./data/sampleA_methyl.bed.gz,WGBS,true,BI
 
 ### Full samplesheet
 
-The pipeline requires a strict 7-column format to correctly process and group your epigenetic data. The pipeline automatically distinguishes between histone data and methylation data based on the file extension (`.bam`/`.bam.gz` for histones, `.bed`/`.bed.gz` for methylation).
+The pipeline uses a **7-column structured format** to process and group epigenetic data.  
+File types are inferred automatically:
+- Histone -> `.bam`, `.bam.gz`
+- Methylation -> `.bed`, `.bed.gz`
 
 A complete samplesheet file consisting of multiple samples, including replicates for specific histone marks and paired methylation data, may look like the one below. This example shows two samples (`CONTROL` and `TREATMENT`), where `CONTROL` has two replicates for the `H3K4me3` mark.
 
@@ -53,15 +56,32 @@ TREATMENT,1,H3K27ac,./data/treatment_H3K27ac.bam,ChIP-seq,true,NBI
 TREATMENT,1,WGBS,./data/treatment_methyl.bed.gz,WGBS,true,BI
 ```
 
-| Column | Description | 
-| ----- | ----- | 
-| `sample_id` | Custom sample name. This entry must be identical for all marks and replicates belonging to the same sample. | 
-| `replicate` | Integer representing the replicate number. Must be unique for multiple files of the *exact same* `epigenetic_mark` within a `sample_id`. | 
-| `epigenetic_mark` | The target mark or assay type (e.g., `H3K4me3`, `H3K27ac`, `WGBS`). | 
-| `file_name` | Full path to the input file. Must end in `.bam` or `.bam.gz` for histones, and `.bed` or `.bed.gz` for methylation data. | 
-| `modality` | The experimental assay used to generate the data (e.g., `ChIP-seq`, `WGBS`, `ATAC`). | 
-| `paired_end` | Boolean (`true` or `false`) indicating if the sequencing data is paired-end. | 
-| `distribution` | The statistical distribution to be applied by the model for this specific mark (e.g., `NBI`, `BI`, `SI`, `BNB`). | 
+| Column | Description |
+|--------|-------------|
+| `sample_id` | Custom sample name. Must be identical across all entries of the same sample. |
+| `replicate` | Integer replicate number. Unique for same `epigenetic_mark` within a sample. |
+| `epigenetic_mark` | Target mark or assay type (e.g., `H3K4me3`, `H3K27ac`, `WGBS`). |
+| `file_name` | Full path to file. `.bam` / `.bam.gz` (histone), `.bed` / `.bed.gz` (methylation). |
+| `modality` | Supported: `ChIP-seq`, `WGBS`, `ATAC-seq`, `NOMe-seq`, `chip`, `wgbs`, `atac`, `nome`. |
+| `paired_end` | Boolean (`true` or `false`). |
+| `distribution` | Statistical distribution used for modeling. |
+
+### Supported Distributions
+
+| Code | Name |
+|------|------|
+| `PO` | Poisson |
+| `ZAP` | Zero Adjusted Poisson |
+| `BI` | Binomial |
+| `NBI` | Negative Binomial |
+| `ZANBI` | Zero Adjusted Negative Binomial |
+| `BB` | Beta Binomial |
+| `BNB` | Beta Negative Binomial |
+| `ZABNB` | Zero Adjusted Beta Negative Binomial |
+| `SI` | Sichel |
+| `ZASI` | Zero Adjusted Sichel |
+| `GA` | Gaussian |
+| `B` | Bernoulli *(requires binarized input)* |
 
 
 An [example samplesheet](../assets/samplesheet.csv) has been provided with the pipeline.
@@ -96,7 +116,7 @@ The pipeline's behavior can be significantly altered using the `--episegmix_mode
 #### Standard Mode (Default)
 
 ```bash
---episegmix_mode standard
+--episegmix_mode standard or --standard
 
 ```
 
@@ -105,7 +125,7 @@ Processes only histone data (BAM files) to generate chromatin segmentation model
 #### DNA Mode
 
 ```bash
---episegmix_mode DNA
+--episegmix_mode DNA or --DNA
 
 ```
 
@@ -114,7 +134,7 @@ Bypasses histone processing entirely. The pipeline will process only methylation
 #### Duration Mode
 
 ```bash
---episegmix_mode duration
+--episegmix_mode duration or --duration
 
 ```
 
@@ -123,11 +143,12 @@ Executes the duration-based Hidden Markov Model (HMM). This is useful for modeli
 #### Fitting Mode
 
 ```bash
---episegmix_mode fitting
+--episegmix_mode fitting or --fitting
 
 ```
 
-This mode does not perform full segmentation. Instead, it extracts counts and runs distribution fitting algorithms to help you determine the optimal statistical distributions (e.g., `NBI`, `BI`, `SI`, `BNB`) for your specific epigenetic marks. You can specify a comma-separated list of distributions to test using the `--distributions` parameter.
+This mode does not perform full segmentation. Instead, it extracts counts and runs distribution-fitting algorithms to help you determine the optimal statistical distributions (e.g., NBI, BI, SI, BNB) for your specific epigenetic marks. You can specify a comma-separated list of distributions to test using the --distributions parameter.
+However, if --best_fit_segmentation is set to true along with fitting, it will run segmentation on the best-fitting distribution found you can also mention --duartion with it for segmentation to done using duartion modules.
 
 #### Merging Histone and Methylation Data
 
