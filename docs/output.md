@@ -6,28 +6,102 @@ This document describes the output produced by the pipeline. Most of the plots a
 
 The directories listed below will be created in the results directory after the pipeline has finished. All paths are relative to the top-level results directory.
 
-<!-- TODO nf-core: Write this documentation describing your workflow's output -->
-
 ## Pipeline overview
 
 The pipeline is built using [Nextflow](https://www.nextflow.io/) and processes data using the following steps:
 
-- [FastQC](#fastqc) - Raw read QC
-- [MultiQC](#multiqc) - Aggregate report describing results and QC from the whole pipeline
-- [Pipeline information](#pipeline-information) - Report metrics generated during the workflow execution
+- [References](#references) - Genomic bins and chromosome sizes used for analysis.
+- [IndexFiles](#indexfiles) - Processed and indexed BAM files.
+- [Counts](#counts) - Binned count matrices for Histones and Methylation.
+- [EpiSegMix](#episegmix) - Trained models, segmentation BED files, and diagnostic plots.
+- [MultiQC](#multiqc) - Aggregate report describing results and QC from the whole pipeline.
+- [Pipeline information](#pipeline-information) - Report metrics generated during the workflow execution.
 
-### FastQC
+---
+
+### References
 
 <details markdown="1">
 <summary>Output files</summary>
 
-- `fastqc/`
-  - `*_fastqc.html`: FastQC report containing quality metrics.
-  - `*_fastqc.zip`: Zip archive containing the FastQC report, tab-delimited data file and plot images.
+- `References/`
+  - `[Genome]/`
+    - `*_bins.bed`: Genomic windows (e.g., 200bp) used for signal aggregation.
+    - `*.chrom.sizes`: The chromosome sizes file fetched for the reference genome.
 
 </details>
 
-[FastQC](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/) gives general quality metrics about your sequenced reads. It provides information about the quality score distribution across your reads, per base sequence content (%A/T/G/C), adapter contamination and overrepresented sequences. For further reading and documentation see the [FastQC help pages](http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/).
+This directory contains the structural files generated during **Genome Preparation**. These files ensure that all downstream counting and modeling are performed on a consistent genomic coordinate system.
+
+### IndexFiles
+
+<details markdown="1">
+<summary>Output files</summary>
+
+- `IndexFiles/`
+  - `[SampleID]/`
+    - `*.nochr.bam`: Filtered BAM files used for the counting process.
+    - `*.nochr.bam.bai`: Coordinate-sorted index files for the BAMs.
+
+</details>
+
+Processed alignment files that have been filtered (e.g., "nochr" suffix) and indexed to allow for efficient count matrix generation.
+
+### Counts
+
+<details markdown="1">
+<summary>Output files</summary>
+
+- `Counts/`
+  - `[SampleID]/`
+    - `[SampleID]_Histones/`: Contains binned histone mark counts.
+    - `*_refined_counts.txt`: The final count matrix used as input for the EpiSegMix model.
+
+</details>
+
+If `--merge` is enabled, these matrices will also include WGBS (Methylation) data intersected with the histone bins.
+
+### EpiSegMix
+
+This is the core results directory, containing the output of the segmentation modeling. Files are organized by sample and state number (e.g., `_s10`).
+
+#### 1. Segmentation
+<details markdown="1">
+<summary>Output files</summary>
+
+- `EpiSegMix/[SampleID]/Segmentation/`
+  - `*.bed.gz`: Compressed BED file containing the genomic coordinates and assigned chromatin states.
+  - `*.txt`: A tab-delimited text version of the segmentation results.
+
+</details>
+
+#### 2. Models
+<details markdown="1">
+<summary>Output files</summary>
+
+- `EpiSegMix/[SampleID]/Models/`
+  - `final-model-*.json`: The trained HMM parameters.
+  - `*.yaml`: The configuration used for the modeling run.
+  - `*.log`: Log files tracking the training and decoding steps.
+  - `*-train-counts.txt`: The specific data matrix used during the training phase.
+
+</details>
+
+#### 3. Plots
+<details markdown="1">
+<summary>Output files</summary>
+
+- `EpiSegMix/[SampleID]/Plots/`
+  - `*-correlation.png`: Correlation matrix of input marks.
+  - `*-histogram.png`: Signal distribution for each mark.
+  - `*-transitionMatrix.png`: Probabilities of transitioning between chromatin states.
+  - `*-meanEmission-viterbi.png` / `*-normEmission-viterbi.png`: Heatmaps showing the signal signature for each state.
+  - `*-stateDistribution-viterbi.png`: Percentage of the genome occupied by each state.
+  - `*-viterbi.html`: **Interactive HTML report** for exploring the segmentation results.
+
+</details>
+
+---
 
 ### MultiQC
 
