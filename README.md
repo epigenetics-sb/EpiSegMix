@@ -28,22 +28,44 @@
 
 ## Default Workflow: Standard Mode
 
-By default, the EPISEGMIX pipeline executes the **Standard Mode** (utilized when `--episegmix_mode` is not specified and `--merge` is false). This primary pathway processes histone data (BAM files) to generate segmentation models, bypassing methylation processing.
+By default, the EPISEGMIX pipeline executes the **Standard Mode** (utilized when `--episegmix_mode` is set to `standard` or remains unspecified, and `--merge` is `false`). This primary pathway processes histone data (BAM files) to generate segmentation models, bypassing methylation processing.
 
 ### Execution Steps
 
-1. **Genome Preparation** (`PREPARE_GENOME`): Generates required genomic bins and extracts chromosome sizes.
-2. **Input Branching**: Parses the input samplesheet, separating BAM files (Histones) from BED files (Methylation).
-3. **Histone Processing** (`PROCESS_HISTONES`): Maps BAM files against the generated chromosome sizes to extract count matrices.
-4. **Metadata Integration**: Formats the histone count data and maps the user-defined statistical distribution dictionary back into the channel metadata.
-5. **Model Training & Inference** (`MODEL_TRAINING_STD`): Routes the finalized data through the standard modeling subworkflow, which executes four consecutive modules:
-    * `episegmix_std_prepare`: Prepares and formats input matrices.
-    * `episegmix_std_train`: Trains the standard segmentation model.
-    * `episegmix_std_decode`: Decodes hidden states to generate genomic segmentations.
-    * `episegmix_std_report`: Compiles final outputs and summary reports.
+1. **Genome Preparation** (`PREPARE_GENOME` & `GENERATE_BINS`): Fetches chromosome size files and generates the required genomic bins.
+
+2. **Processing Branching (Histone & Methylation)**: Parses the input samplesheet and evaluates the `--merge` flag:
+    * **Histone Processing** (`PROCESS_HISTONES`): Maps BAM files against genomic bins to extract count matrices. 
+    * **Methylation Processing** (`PROCESS_METHYL`): Triggered if `--merge true`. Processes BED files at base-pair resolution with merged +/- strands to maintain signal fidelity.
+
+3. **Count Merging & Synchronization** (`MERGE_DATA`): If `--merge` is enabled, the pipeline intersects the processed matrices. This synchronizes the Histone (binned) and Methylation (base-pair) data into a consistent windowed format to ensure all multi-omic layers are aligned to the same coordinate system.
+
+4. **Segmentation Modeling**: Based on the selected `--episegmix_mode` (`standard`, `duration`, or `dna`), the data is routed through a specific modeling subworkflow:
+    * **Standard** (`MODEL_TRAINING_STD`): Default HMM-based segmentation.
+    * **Duration-Aware** (`MODEL_TRAINING_DM`): Incorporates state duration modeling.
+    * **DNA-Centric** (`MODEL_TRAINING_DNA`): Optimized for DNA-specific features.
+    * *Note: Each subworkflow executes four consecutive modules: `prepare`, `train`, `decode`, and `report`.*
+
+5. **Distribution Fitting & Automated Selection** (`DISTRIBUTION_FITTING`): If the `fitting` mode is triggered, the pipeline identifies the optimal statistical distribution for the data using:
+    * `episegmix_distfit_histone_train`: Trains models across statistical distributions.
+    * `episegmix_distfit_histone_assess`: Evaluates and selects the distribution with the best fit.
+    * **Automated Step**: If the `--best_fit_segmentation` flag is present, the pipeline automatically executes the segmentation workflow (Step 4). By default, this runs in `standard` mode unless `--duration` is explicitly specified.
 
 ---
-**Note on Alternative Modes:** The workflow dynamically reroutes execution if alternative parameters are provided. Using `--episegmix_mode DNA`, `--episegmix_mode duration`, `--episegmix_mode fitting`, or `--merge` will automatically trigger methylation processing (`PROCESS_METHYL`) or route data to the corresponding specialized modeling subworkflows.
+
+### **Subworkflow Reference**
+The pipeline logic is organized into the following modular components:
+
+| Category | Subworkflows |
+| :--- | :--- |
+| **Setup** | `PREPARE_GENOME`, `GENERATE_BINS` |
+| **Data Processing** | `PROCESS_HISTONES`, `PROCESS_METHYL`, `MERGE_DATA` |
+| **Modeling Modes** | `MODEL_TRAINING_STD`, `MODEL_TRAINING_DM`, `MODEL_TRAINING_DNA` |
+| **Optimization** | `DISTRIBUTION_FITTING` |
+
+---
+
+> **Note:** You can set the execution mode using the primary `--episegmix_mode` flag (e.g., `standard`, `duration`, `dna`, or `fitting`) or by using direct shortcut flags: `--standard`, `--duration`, `--dna`, or `--fitting`.
 
 
 ## Usage
