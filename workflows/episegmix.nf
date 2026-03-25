@@ -42,7 +42,7 @@ workflow EPISEGMIX {
     // ---------------------------------------------------------
     // DETERMINE PIPELINE BEHAVIOR FLAGS
     // ---------------------------------------------------------
-    def is_dna      = params.dna || params.DNA
+    def is_dna      = params.DNA
     def is_counts   = params.counts
 
     // ---------------------------------------------------------
