@@ -1,3 +1,3 @@
 sample_id,replicate,epigenetic_mark,file_name,modality,paired_end,distribution
-TEST,1,H3K4me3,./assets/test-data/test_chip.bam,ChIP-seq,true,NBI
-TEST,1,WGBS,./assets/test-data/test_methyl.bed.gz,WGBS,true,BI
+Forebrain_16.5,1,H3K4me3,https://www.encodeproject.org/files/ENCFF062IUH/@@download/ENCFF062IUH.bam,ChIP-seq,true,NBI
+Forebrain_16.5,1,WGBS,https://www.encodeproject.org/files/ENCFF457SPJ/@@download/ENCFF457SPJ.bed.gz,WGBS,true,BI

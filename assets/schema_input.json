@@ -38,7 +38,7 @@
             },
             "modality": {
                 "type": "string",
-                "enum": ["ChIP-seq", "WGBS", "ATAC-seq", "NOMe-seq"],
+                "enum": ["ChIP-seq", "WGBS", "ATAC-seq", "NOMe-seq", "chip", "wgbs", "atac", "nome"],
                 "description": "The sequencing experiment type",
                 "errorMessage": "modality must be one of: ChIP-seq, WGBS, ATAC-seq, NOMe-seq",
                 "meta": ["modality"]
