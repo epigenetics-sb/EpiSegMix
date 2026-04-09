@@ -120,11 +120,15 @@ For more details about the output files and reports, please refer to the
 
 ## Credits
 
-nf-core/episegmix was originally written by [Aaryan Jaitly](https://github.com/aaryanjaitly).
-
-We thank the following people for their extensive assistance in the development of this pipeline:
-
+EpiSegMix tool was devloped and designed by:
 - [Nihit Aggarwal](nihit.aggarwal@uni-saarland.de/)
+- [Johanna Elena Schmitz]
+- [Dr. AbdulRahman Salhab]
+- [Prof. Dr. Jörn Walter]
+- [Prof. Dr. Sven Rahmann]
+
+
+nf-core/episegmix was originally written by [Aaryan Jaitly](https://github.com/aaryanjaitly)
 
 ## Contributions and Support
 
