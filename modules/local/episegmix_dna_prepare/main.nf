@@ -23,7 +23,7 @@ process EPISEGMIX_DNA_PREPARE {
     def prefix = meta.id
     def meth_list = meth instanceof List ? meth : [meth]
     
-    // Format file paths for YAML (Fixed: No brackets for single file so pandas reads as string)
+    // Format file paths for YAML
     def yaml_data
     if (meth_list.size() == 1) {
         yaml_data = "\"\$(pwd)/${meth_list[0]}\""

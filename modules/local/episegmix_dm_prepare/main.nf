@@ -64,7 +64,6 @@ meth_data: [\$(pwd)/${meth}]
 EOF
     fi
 
-    # SIMPLE CALL: Just like you wanted
     get_counts.py \\
         -d "${prefix}.yaml" \\
         -c "${prefix}-train-counts.txt" \\

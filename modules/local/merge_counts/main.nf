@@ -37,119 +37,31 @@ process MERGE_COUNTS {
     def histone_path = files_hist instanceof List ? files_hist[0] : files_hist
 
     """
-    set -euo pipefail
+    # Execute the external bash script and pass variables as arguments
+    merge_counts.sh \\
+        "${sample_id}" \\
+        "${segment_coords}" \\
+        "${wgbs_path}" \\
+        "${nome_path}" \\
+        "${histone_path}"
 
-    SORTED_SEG="${sample_id}_segments_sorted.bed"
-    bedtools sort -i "${segment_coords}" > "\$SORTED_SEG"
-
-    CURRENT_BED="\$SORTED_SEG"
-    HAS_WGBS="false"
-    HAS_NOME="false"
-
-    # 1. Process WGBS Map (with Rounding)
-    if [[ -n "${wgbs_path}" ]]; then
-        bedtools map \\
-            -a "\$CURRENT_BED" \\
-            -b <(tail -n +2 "${wgbs_path}") \\
-            -c 4,5 -o median -null 0 \\
-        | awk -v OFS='\\t' '{\$4=int(\$4+0.5); \$5=int(\$5+0.5); print}' \\
-        > temp_wgbs.bed
-        mv temp_wgbs.bed "\$CURRENT_BED"
-        HAS_WGBS="true"
-    fi
-
-    # 2. Process NOMe Map (with Rounding)
-    if [[ -n "${nome_path}" ]]; then
-        bedtools map \\
-            -a "\$CURRENT_BED" \\
-            -b <(tail -n +2 "${nome_path}") \\
-            -c 4,5 -o median -null 0 \\
-        | awk -v OFS='\\t' '{\$4=int(\$4+0.5); \$5=int(\$5+0.5); print}' \\
-        > temp_nome.bed
-        mv temp_nome.bed "\$CURRENT_BED"
-        HAS_NOME="true"
-    fi
-
-    FINAL_OUT="${sample_id}_seg_tabs_counts.bed"
-    INTERSECT_TEMP="intersect_temp.bed"
-    HISTONE_HEADER=\$(head -n 1 "${histone_path}")
-
-    # 3. Intersect with Histone data
-    bedtools intersect \\
-        -a "\$CURRENT_BED" \\
-        -b <(tail -n+2 "${histone_path}") \\
-        -wa -wb \\
-        > "\$INTERSECT_TEMP"
-
-    # 4. Construct Table based on available modalities
-    if [[ "\$HAS_WGBS" == "true" && "\$HAS_NOME" == "true" ]]; then
-        echo -e "\${HISTONE_HEADER}\tCov_WGBS\tMeth_WGBS\tCov_NOME\tMeth_NOME" > "\$FINAL_OUT"
-        awk -v OFS='\\t' '{
-            for(i=8; i<=NF; i++) printf "%s%s", \$i, OFS;
-            printf "%s\\t%s\\t%s\\t%s\\n", \$4, \$5, \$6, \$7;
-        }' "\$INTERSECT_TEMP" >> "\$FINAL_OUT"
-
-    elif [[ "\$HAS_WGBS" == "true" ]]; then
-        echo -e "\${HISTONE_HEADER}\tCov_WGBS\tMeth_WGBS" > "\$FINAL_OUT"
-        awk -v OFS='\\t' '{
-            for(i=6; i<=NF; i++) printf "%s%s", \$i, OFS;
-            printf "%s\\t%s\\n", \$4, \$5;
-        }' "\$INTERSECT_TEMP" >> "\$FINAL_OUT"
-
-    elif [[ "\$HAS_NOME" == "true" ]]; then
-        echo -e "\${HISTONE_HEADER}\tCov_NOME\tMeth_NOME" > "\$FINAL_OUT"
-        awk -v OFS='\\t' '{
-            for(i=6; i<=NF; i++) printf "%s%s", \$i, OFS;
-            printf "%s\\t%s\\n", \$4, \$5;
-        }' "\$INTERSECT_TEMP" >> "\$FINAL_OUT"
-    else
-        exit 1
-    fi
-
-    # -----------------------------------------------------------------
-    # 5. SORT COLUMNS ALPHABETICALLY TO ENSURE CONSISTENCY
-    # -----------------------------------------------------------------
-    HEADER=\$(head -n 1 "\$FINAL_OUT")
-    
-    NUM_METRICS=0
-    if [[ "\$HAS_WGBS" == "true" ]]; then NUM_METRICS=\$((NUM_METRICS + 2)); fi
-    if [[ "\$HAS_NOME" == "true" ]]; then NUM_METRICS=\$((NUM_METRICS + 2)); fi
-    
-    HIST_COLS=\$(echo "\$HEADER" | awk -F'\\t' -v m="\$NUM_METRICS" '{
-        for(i=4; i<=NF-m; i++) print i, \$i
-    }' | sort -k2,2 | awk '{printf "\$%s,", \$1}' | sed 's/,\$//')
-    
-    PRINT_COLS='\$1, \$2, \$3'
-    if [[ -n "\$HIST_COLS" ]]; then
-        PRINT_COLS="\$PRINT_COLS, \$HIST_COLS"
-    fi
-    if [[ \$NUM_METRICS -gt 0 ]]; then
-        METRIC_COLS=\$(echo "\$HEADER" | awk -F'\\t' -v m="\$NUM_METRICS" '{
-            for(i=NF-m+1; i<=NF; i++) printf "\$%s,", i
-        }' | sed 's/,\$//')
-        PRINT_COLS="\$PRINT_COLS, \$METRIC_COLS"
-    fi
-    
-    awk -F'\\t' -v OFS='\\t' '{print '"\$PRINT_COLS"'}' "\$FINAL_OUT" > temp_sorted.bed
-    mv temp_sorted.bed "\$FINAL_OUT"
-
+    # Generate version info
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
         bedtools: \$(bedtools --version | sed -e "s/bedtools v//g")
         awk: \$(awk --version | head -n 1 | awk '{print \$3}')
-END_VERSIONS
+    END_VERSIONS
     """
 
     stub:
     def sample_id = meta.id
     """
     touch "${sample_id}_seg_tabs_counts.bed"
-    echo "stub" > versions.yml
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
         bedtools: \$(bedtools --version | sed -e "s/bedtools v//g")
         awk: \$(awk --version | head -n 1 | awk '{print \$3}')
-END_VERSIONS
+    END_VERSIONS
     """
 }

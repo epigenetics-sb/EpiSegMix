@@ -24,7 +24,6 @@ process EPISEGMIX_STD_PREPARE {
     def prefix         = "${meta.id}"
     def dist_hist      = params.dist_histone.toString()
     def dist_meth      = params.dist_methyl.toString()
-    // Convert distributions map to a simple comma-separated string for easy parsing in Bash
     def dist_overrides = meta.distributions ? meta.distributions.collect { k, v -> "${k}:${v}" }.join(",") : ""
 
     """
