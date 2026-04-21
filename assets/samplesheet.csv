@@ -1,3 +1,4 @@
 sample_id,replicate,epigenetic_mark,file_name,modality,paired_end,distribution
-Forebrain_16.5,1,H3K4me3,https://www.encodeproject.org/files/ENCFF062IUH/@@download/ENCFF062IUH.bam,ChIP-seq,true,NBI
-Forebrain_16.5,1,WGBS,https://www.encodeproject.org/files/ENCFF457SPJ/@@download/ENCFF457SPJ.bed.gz,WGBS,true,BI
+kidney_P0,1,H3K4me3,https://raw.githubusercontent.com/nf-core/test-datasets/epigenomesegmentation/testdata/H3K4me3_mm10_kidney_chr12_reduced.bam,ChIP-seq,false,NBI
+kidney_P0,1,H3K36me3,https://raw.githubusercontent.com/nf-core/test-datasets/epigenomesegmentation/testdata/H3K36me3_mm10_kidney_chr12_reduced.bam,ChIP-seq,false,NBI
+kidney_P0,1,WGBS,https://raw.githubusercontent.com/nf-core/test-datasets/epigenomesegmentation/testdata/WGBS_mm10_kidney_chr12_reduced.bed.gz,WGBS,true,BI
