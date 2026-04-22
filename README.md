@@ -40,7 +40,7 @@ By default, the EPISEGMIX pipeline executes the **Standard Mode** (utilized when
 
 3. **Count Merging & Synchronization** (`MERGE_DATA`): If `--merge` is enabled, the pipeline intersects the processed matrices. This synchronizes the Histone (binned) and Methylation (base-pair) data into a consistent windowed format to ensure all multi-omic layers are aligned to the same coordinate system.
 
-4. **Segmentation Modeling**: Based on the selected `--episegmix_mode` (`standard`, `duration`, or `dna`), the data is routed through a specific modeling subworkflow:
+4. **Segmentation Modeling**: Based on the selected  (`--standard`, `--duration`, or `--dna`), the data is routed through a specific modeling subworkflow:
     * **Standard** (`MODEL_TRAINING_STD`): Default HMM-based segmentation.
     * **Duration-Aware** (`MODEL_TRAINING_DM`): Incorporates state duration modeling.
     * **DNA-Centric** (`MODEL_TRAINING_DNA`): Optimized for DNA-specific features.

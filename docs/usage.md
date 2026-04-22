@@ -111,7 +111,7 @@ Pipeline settings can be provided in a `yaml` or `json` file via `-params-file <
 
 ### EpiSegMix Run Modes
 
-The pipeline's behavior can be significantly altered using the `--episegmix_mode` parameter and the `--merge` flag. By default, the pipeline runs in `standard` mode.
+The pipeline's behavior can be significantly altered using the `--episegmix_mode` parameter or by using modes as bolean flags `--standard, --duration, --DNA, --fitting` and the `--merge` flag. By default, the pipeline runs in `standard` mode.
 
 #### Standard Mode (Default)
 
